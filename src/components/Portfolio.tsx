@@ -14,6 +14,13 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
+// Biocode screenshots
+import biocodeHome from '@/assets/biocode-home.png';
+import biocodeSobre from '@/assets/biocode-sobre.png';
+import biocodeTime from '@/assets/biocode-time.png';
+import biocodeExibicoes from '@/assets/biocode-exibicoes.png';
+import biocodeContato from '@/assets/biocode-contato.png';
+
 const filters = ['All', 'Web', 'App', 'Design'];
 
 interface Project {
@@ -42,31 +49,36 @@ const projects: Project[] = [
     category: 'Web',
     description: 'BioCode desenvolve software sustentável, combinando tecnologia e responsabilidade ambiental para soluções inovadoras e eficientes.',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80',
+    image: biocodeHome,
     demoUrl: 'https://draxsd3.github.io/biocode/',
     codeUrl: 'https://github.com/Draxsd3/biocode',
     screenshots: [
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&h=800&fit=crop&q=80',
+      biocodeHome,
+      biocodeSobre,
+      biocodeTime,
+      biocodeExibicoes,
+      biocodeContato,
     ],
     development: {
       duration: '2 semanas',
-      team: 'Solo',
+      team: '6 integrantes',
       year: '2024',
       challenges: [
         'Criar design responsivo para todos os dispositivos',
         'Implementar animações suaves de scroll',
-        'Otimizar performance do site',
+        'Integração das artes com a estrutura do site',
+        'Coordenação do trabalho em equipe do TCC',
       ],
-      technologies: ['HTML5', 'CSS3', 'JavaScript ES6', 'Git'],
+      technologies: ['HTML5', 'CSS3', 'JavaScript ES6', 'Git', 'GitHub Pages'],
       features: [
         'Design responsivo',
-        'Animações CSS customizadas',
-        'Formulário de contato',
-        'SEO otimizado',
+        'Seção Home com hero impactante',
+        'Sobre Nós com história da empresa',
+        'Nosso Time com cards dos integrantes',
+        'Seção de Exibições e Eventos',
+        'Página de Contato com redes sociais',
       ],
-      description: 'Este projeto foi desenvolvido para a BioCode com foco em sustentabilidade e tecnologia. O desafio principal foi criar uma identidade visual que transmitisse os valores da empresa enquanto mantinha uma experiência de usuário fluida e moderna.',
+      description: 'Projeto de TCC desenvolvido em grupo para a faculdade. O Biocode é uma empresa fictícia de tecnologia voltada para agricultura inteligente, combinando inovação e sustentabilidade. O site foi criado com HTML, CSS e JavaScript puro, apresentando um design moderno com tema escuro e detalhes em dourado.',
     },
   },
   {
