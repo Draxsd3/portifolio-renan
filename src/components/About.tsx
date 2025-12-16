@@ -51,7 +51,7 @@ export const About = () => {
               Sou um desenvolvedor de software fullstack com especialização em desenvolvimento front-end e experiência sólida em tecnologias como JavaScript, TypeScript, ReactJS, React Native, NodeJS, Styled-Components e Vue. Também possuo habilidades de desenvolvimento back-end, o que me permite criar aplicações completas, escaláveis e de alta performance que proporcionam experiências excepcionais aos usuários.
             </p>
 
-            <a href="#" className="btn-primary">
+            <a href="/Curriculo_Renan_Ramos.pdf" download className="btn-primary">
               Download CV
               <Download size={18} />
             </a>
