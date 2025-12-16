@@ -1,0 +1,18 @@
+import { Heart } from 'lucide-react';
+
+export const Footer = () => {
+  return (
+    <footer className="py-8 border-t border-border">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © 2024 Renan Ramos. Todos os direitos reservados.
+          </p>
+          <p className="text-sm text-muted-foreground flex items-center gap-1">
+            Feito com <Heart size={14} className="text-primary fill-primary" /> usando React + TypeScript
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
