@@ -40,7 +40,7 @@ export const Hero = () => {
           {/* Profile Image */}
           <div className="animate-fade-in mb-8">
             <div className="relative">
-              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg">
+              <div className="w-48 h-48 md:w-56 md:h-56 blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg">
                 <img
                   src={profilePhoto}
                   alt="Renan Ramos - Desenvolvedor FullStack"
