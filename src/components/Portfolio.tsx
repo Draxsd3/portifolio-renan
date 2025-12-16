@@ -38,6 +38,13 @@ import crmMetricas from '@/assets/crm-metricas.png';
 import crmAgenda from '@/assets/crm-agenda.png';
 import crmPipeline from '@/assets/crm-pipeline.png';
 
+// Sistema de Análise de Crédito com IA screenshots
+import creditoIAFluxo from '@/assets/credito-ia-fluxo.png';
+import creditoIAAnalise from '@/assets/credito-ia-analise.png';
+import creditoIAValores from '@/assets/credito-ia-valores.png';
+import creditoIAFeedback from '@/assets/credito-ia-feedback.png';
+import creditoIAResultado from '@/assets/credito-ia-resultado.jpg';
+
 const filters = ['All', 'Web', 'App', 'Design'];
 
 interface Project {
@@ -178,35 +185,42 @@ const projects: Project[] = [
     },
   },
   {
-    title: 'Meu Portfólio',
-    category: 'Web',
-    description: 'Portfólio pessoal destacando projetos, habilidades e experiências profissionais com design moderno e responsivo.',
-    tags: ['React.js', 'TypeScript', 'Tailwind'],
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&q=80',
-    demoUrl: 'https://draxsd3.github.io/portifolio/',
-    codeUrl: 'https://github.com/Draxsd3/portifolio',
+    title: 'Análise de Crédito com IA',
+    category: 'App',
+    description: 'Sistema inteligente de análise de crédito utilizando agente RAG que aprende continuamente com feedbacks dos analistas.',
+    tags: ['React.js', 'Node.js', 'OpenAI', 'RAG'],
+    image: creditoIAResultado,
+    demoUrl: '#',
+    codeUrl: '#',
     screenshots: [
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=800&fit=crop&q=80',
+      creditoIAResultado,
+      creditoIAAnalise,
+      creditoIAValores,
+      creditoIAFeedback,
+      creditoIAFluxo,
     ],
     development: {
-      duration: '1 semana',
+      duration: '3 meses',
       team: 'Solo',
-      year: '2024',
+      year: '2025',
       challenges: [
-        'Design minimalista e impactante',
-        'Animações de scroll suaves',
-        'Otimização de imagens',
+        'Implementação de agente RAG com memória vetorial',
+        'Sistema de aprendizado contínuo via feedback',
+        'Extração automática de dados de documentos',
+        'Análise de risco com múltiplos critérios',
+        'Integração com Supabase Vector Store',
       ],
-      technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      technologies: ['React.js', 'Node.js', 'n8n', 'OpenAI GPT-4', 'Supabase', 'PostgreSQL', 'Embeddings', 'RAG'],
       features: [
-        'Design responsivo',
-        'Tema dark/light',
-        'Animações interativas',
-        'Formulário de contato',
+        'Análise automática de NF-e, Duplicatas e Boletos',
+        'Extração de dados de cedente e sacados',
+        'Parecer com IA baseado em perfil de risco',
+        'Scores de segurança (Cedente, Sacado, Operação)',
+        'Sistema de feedback para aprendizado contínuo',
+        'Histórico de análises realizadas',
+        'Gráfico radar de perfil de risco',
       ],
-      description: 'Portfólio pessoal desenvolvido para apresentar meus projetos e habilidades. O objetivo foi criar uma experiência visual impactante com design minimalista, mantendo foco na usabilidade e performance.',
+      description: 'Sistema de análise de crédito inteligente desenvolvido para a Gold Credit. Utiliza um agente RAG (Retrieval Augmented Generation) que analisa documentos financeiros e gera pareceres automáticos. O diferencial é o sistema de aprendizado contínuo: cada feedback dos analistas é armazenado como embedding no Supabase Vector Store, permitindo que a IA aprenda com decisões passadas e melhore suas análises futuras.',
     },
   },
 ];
