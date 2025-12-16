@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, Code, Server } from 'lucide-react';
 
 const frontendSkills = [
-  { name: 'HTML', level: 'Advanced', percentage: 95 },
+  { name: 'Next.js', level: 'Advanced', percentage: 90 },
   { name: 'CSS', level: 'Advanced', percentage: 90 },
   { name: 'JavaScript', level: 'Intermediate', percentage: 80 },
   { name: 'React', level: 'Intermediate', percentage: 75 },
@@ -81,7 +81,7 @@ export const Skills = () => {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <SkillCard title="Frontend Developer" icon={Code} skills={frontendSkills} defaultOpen={true} />
-          <SkillCard title="Backend Developer" icon={Server} skills={backendSkills} />
+          <SkillCard title="Backend Developer" icon={Server} skills={backendSkills} defaultOpen={true} />
         </div>
       </div>
     </section>
