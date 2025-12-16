@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const navItems = [
   { label: 'Início', href: '#home' },
@@ -31,8 +32,8 @@ export const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="font-display text-xl font-bold text-foreground tracking-tight">
-            <span className="text-2xl">R</span>enan<span className="text-muted-foreground">.</span>
+          <a href="#home" className="flex items-center">
+            <img src={logo} alt="Renan Logo" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
