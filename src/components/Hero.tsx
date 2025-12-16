@@ -3,7 +3,7 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-12 relative">
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-32 relative">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center text-center">
           {/* Social Links - Left Side */}
