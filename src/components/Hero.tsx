@@ -1,4 +1,4 @@
-import { Instagram, Github, Linkedin, Send } from 'lucide-react';
+import { Instagram, Github, Linkedin, Send, Download } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const Hero = () => {
@@ -71,6 +71,14 @@ export const Hero = () => {
               <a href="#contact" className="btn-primary">
                 Say Hello
                 <Send size={18} />
+              </a>
+              <a 
+                href="/Curriculo_Renan_Ramos.pdf" 
+                download 
+                className="btn-secondary"
+              >
+                Download CV
+                <Download size={18} />
               </a>
             </div>
 
