@@ -148,7 +148,7 @@ const projects: Project[] = [
     category: 'App',
     description: 'Sistema CRM sob medida com integração de IA, Google Agenda e gestão completa de leads e pipeline de vendas.',
     tags: ['React.js', 'Node.js', 'MongoDB'],
-    image: crmDashboard,
+    image: crmLogin,
     demoUrl: '#',
     codeUrl: '#',
     screenshots: [
@@ -189,7 +189,7 @@ const projects: Project[] = [
     category: 'App',
     description: 'Sistema inteligente de análise de crédito utilizando agente RAG que aprende continuamente com feedbacks dos analistas.',
     tags: ['React.js', 'Node.js', 'OpenAI', 'RAG'],
-    image: creditoIAResultado,
+    image: creditoIAFluxo,
     demoUrl: '#',
     codeUrl: '#',
     screenshots: [
