@@ -21,6 +21,14 @@ import biocodeTime from '@/assets/biocode-time.png';
 import biocodeExibicoes from '@/assets/biocode-exibicoes.png';
 import biocodeContato from '@/assets/biocode-contato.png';
 
+// Gold Credit screenshots
+import goldcreditHome from '@/assets/goldcredit-home.png';
+import goldcreditSolucoes from '@/assets/goldcredit-solucoes.png';
+import goldcreditSobre from '@/assets/goldcredit-sobre.png';
+import goldcreditAtuacao from '@/assets/goldcredit-atuacao.png';
+import goldcreditDiferenciais from '@/assets/goldcredit-diferenciais.png';
+import goldcreditFooter from '@/assets/goldcredit-footer.png';
+
 const filters = ['All', 'Web', 'App', 'Design'];
 
 interface Project {
@@ -84,33 +92,39 @@ const projects: Project[] = [
   {
     title: 'Website Gold Credit',
     category: 'Web',
-    description: 'Website corporativo para Gold Credit, projetado com minimalismo e profissionalismo, garantindo uma experiência intuitiva e sofisticada.',
+    description: 'Website corporativo para Gold Credit, empresa de antecipação de recebíveis, projetado com elegância e profissionalismo.',
     tags: ['React.js', 'TypeScript', 'Vite'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80',
+    image: goldcreditHome,
     demoUrl: 'https://goldcreditsa.com.br/',
     codeUrl: '#',
     screenshots: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=800&fit=crop&q=80',
+      goldcreditHome,
+      goldcreditSolucoes,
+      goldcreditSobre,
+      goldcreditAtuacao,
+      goldcreditDiferenciais,
+      goldcreditFooter,
     ],
     development: {
       duration: '4 semanas',
       team: 'Solo',
       year: '2024',
       challenges: [
-        'Integração com sistemas de CRM existentes',
-        'Implementação de formulários complexos',
-        'Garantir segurança dos dados financeiros',
+        'Criar identidade visual premium e confiável',
+        'Implementar seções informativas sobre soluções financeiras',
+        'Desenvolver layout responsivo e acessível',
+        'Integração com WhatsApp para atendimento',
       ],
-      technologies: ['React.js', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js'],
+      technologies: ['React.js', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
       features: [
-        'Sistema de simulação de crédito',
-        'Dashboard administrativo',
-        'Integração com APIs bancárias',
-        'Área do cliente',
+        'Hero section impactante',
+        'Seção de Soluções (Antecipação, Crédito Agro, Investimentos)',
+        'Quem Somos com valores da empresa',
+        'Mapa de atuação nacional',
+        'Diferenciais competitivos',
+        'Footer com informações de contato',
       ],
-      description: 'Projeto desenvolvido para a Gold Credit, uma empresa de crédito consignado. O foco foi criar uma plataforma confiável e profissional que transmitisse segurança aos clientes, com formulários de simulação de crédito e área administrativa completa.',
+      description: 'Website institucional desenvolvido para a Gold Credit, securitizadora especializada em antecipação de recebíveis. O projeto apresenta um design elegante com tema escuro e detalhes dourados, transmitindo confiança e profissionalismo para o mercado financeiro.',
     },
   },
   {
