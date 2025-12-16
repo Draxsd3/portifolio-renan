@@ -32,8 +32,9 @@ export const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center">
+          <a href="#home" className="flex items-center gap-3">
             <img src={logo} alt="Renan Logo" className="h-10 w-auto" />
+            <span className="font-display text-xl font-bold text-foreground tracking-tight">Renan Ramos</span>
           </a>
 
           {/* Desktop Navigation */}
