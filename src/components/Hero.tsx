@@ -1,4 +1,4 @@
-import { Instagram, Github, Linkedin, Send, ChevronDown, Mouse } from 'lucide-react';
+import { Instagram, Github, Linkedin, Send } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const Hero = () => {
@@ -105,11 +105,17 @@ export const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="hidden md:flex items-center gap-2 absolute bottom-12 left-1/2 -translate-x-1/2">
-          <Mouse size={18} className="text-muted-foreground" />
-          <span className="text-sm text-muted-foreground font-medium">Scroll Down</span>
-          <ChevronDown size={16} className="text-muted-foreground animate-scroll-bounce" />
-        </div>
+        <a 
+          href="#about" 
+          className="hidden md:flex flex-col items-center gap-3 absolute bottom-12 left-1/2 -translate-x-1/2 group cursor-pointer"
+        >
+          <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase group-hover:text-foreground transition-colors duration-300">
+            Scroll
+          </span>
+          <div className="relative w-6 h-10 border-2 border-muted-foreground/50 rounded-full group-hover:border-foreground/70 transition-colors duration-300">
+            <div className="absolute left-1/2 -translate-x-1/2 top-2 w-1 h-2 bg-muted-foreground rounded-full animate-scroll-bounce group-hover:bg-foreground transition-colors duration-300" />
+          </div>
+        </a>
       </div>
     </section>
   );
