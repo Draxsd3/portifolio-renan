@@ -29,6 +29,15 @@ import goldcreditAtuacao from '@/assets/goldcredit-atuacao.png';
 import goldcreditDiferenciais from '@/assets/goldcredit-diferenciais.png';
 import goldcreditFooter from '@/assets/goldcredit-footer.png';
 
+// CRM Gold Credit screenshots
+import crmLogin from '@/assets/crm-login.png';
+import crmDashboard from '@/assets/crm-dashboard.png';
+import crmLeads from '@/assets/crm-leads.png';
+import crmVideoIA from '@/assets/crm-video-ia.png';
+import crmMetricas from '@/assets/crm-metricas.png';
+import crmAgenda from '@/assets/crm-agenda.png';
+import crmPipeline from '@/assets/crm-pipeline.png';
+
 const filters = ['All', 'Web', 'App', 'Design'];
 
 interface Project {
@@ -130,34 +139,42 @@ const projects: Project[] = [
   {
     title: 'CRM Gold Credit',
     category: 'App',
-    description: 'Sistema de CRM personalizado e exclusivo, desenvolvido sob medida para integrar, gerenciar e otimizar o relacionamento com clientes.',
-    tags: ['Node.js', 'React.js', 'MySQL'],
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&q=80',
+    description: 'Sistema CRM sob medida com integração de IA, Google Agenda e gestão completa de leads e pipeline de vendas.',
+    tags: ['React.js', 'Node.js', 'MongoDB'],
+    image: crmDashboard,
     demoUrl: '#',
     codeUrl: '#',
     screenshots: [
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&h=800&fit=crop&q=80',
+      crmLogin,
+      crmDashboard,
+      crmPipeline,
+      crmLeads,
+      crmAgenda,
+      crmMetricas,
+      crmVideoIA,
     ],
     development: {
-      duration: '3 meses',
-      team: '2 desenvolvedores',
+      duration: '6 meses',
+      team: 'Solo',
       year: '2024',
       challenges: [
-        'Modelagem de banco de dados complexa',
-        'Sistema de permissões por níveis',
-        'Relatórios em tempo real',
+        'Integração com Google Calendar API',
+        'Implementação de IA para resumo de vídeos',
+        'Sistema de pipeline visual estilo Kanban',
+        'Gestão de permissões por departamento',
+        'Relatórios e métricas em tempo real',
       ],
-      technologies: ['Node.js', 'Express', 'React.js', 'MySQL', 'Redis', 'Docker'],
+      technologies: ['React.js', 'Vite', 'Node.js', 'MongoDB Atlas', 'Vercel', 'Hostinger', 'OpenAI API', 'Google Calendar API'],
       features: [
-        'Gestão completa de clientes',
-        'Pipeline de vendas',
-        'Relatórios automatizados',
-        'Integração com WhatsApp',
-        'Sistema de notificações',
+        'Login seguro com autenticação',
+        'Dashboard com métricas de conversão',
+        'Pipeline visual de vendas (Kanban)',
+        'Gestão de leads frios com calendário',
+        'Agenda integrada com Google Calendar',
+        'Relatórios de conversão e desempenho',
+        'Resumo de vídeo com IA (Whisper + GPT)',
       ],
-      description: 'Sistema CRM completo desenvolvido especificamente para as necessidades da Gold Credit. Inclui gestão de leads, acompanhamento de propostas, integração com sistemas bancários e relatórios detalhados de performance da equipe comercial.',
+      description: 'CRM completo desenvolvido sob medida para a Gold Credit. O sistema oferece gestão inteligente de relacionamento com clientes, incluindo pipeline visual de vendas, integração com Google Agenda para reuniões, e funcionalidade de IA para transcrição e resumo automático de vídeos de reuniões. Hospedado na Vercel (frontend), Hostinger (backend) e MongoDB Atlas (database).',
     },
   },
   {
