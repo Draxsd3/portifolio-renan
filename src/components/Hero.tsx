@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 pb-12 relative">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col items-center text-center">
           {/* Social Links - Left Side */}
           <div className="hidden lg:flex flex-col gap-5 fixed left-8 top-1/2 -translate-y-1/2 z-40">
             <a
@@ -37,23 +37,37 @@ export const Hero = () => {
             </a>
           </div>
 
+          {/* Profile Image */}
+          <div className="animate-fade-in mb-8">
+            <div className="relative">
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg">
+                <img
+                  src={profilePhoto}
+                  alt="Renan Ramos - Desenvolvedor FullStack"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Content */}
-          <div className="lg:pl-12 animate-fade-in-up">
+          <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 tracking-tight">
               Renan Ramos{' '}
               <span className="inline-block wave-emoji">👋</span>
             </h1>
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-4 mb-6">
               <span className="w-16 h-[2px] bg-foreground"></span>
               <h2 className="text-lg md:text-xl text-muted-foreground font-medium">
                 FullStack Developer
               </h2>
+              <span className="w-16 h-[2px] bg-foreground"></span>
             </div>
-            <p className="text-muted-foreground max-w-lg mb-8 leading-relaxed text-base">
+            <p className="text-muted-foreground max-w-lg mx-auto mb-8 leading-relaxed text-base">
               Desenvolvedor de software apaixonado por tecnologia e pela criação de soluções inovadoras para desafios complexos. Especializado em criar experiências digitais de alta qualidade.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex justify-center gap-4">
               <a href="#contact" className="btn-primary">
                 Say Hello
                 <Send size={18} />
@@ -61,7 +75,7 @@ export const Hero = () => {
             </div>
 
             {/* Mobile Social Links */}
-            <div className="flex lg:hidden gap-5 mt-8">
+            <div className="flex lg:hidden justify-center gap-5 mt-8">
               <a
                 href="https://instagram.com/mr.renan1"
                 target="_blank"
@@ -86,19 +100,6 @@ export const Hero = () => {
               >
                 <Linkedin size={20} />
               </a>
-            </div>
-          </div>
-
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-[380px] lg:h-[380px] blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg">
-                <img
-                  src={profilePhoto}
-                  alt="Renan Ramos - Desenvolvedor FullStack"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                />
-              </div>
             </div>
           </div>
         </div>
