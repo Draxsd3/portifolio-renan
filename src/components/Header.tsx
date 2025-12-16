@@ -6,6 +6,7 @@ const navItems = [
   { label: 'Sobre', href: '#about' },
   { label: 'Habilidades', href: '#skills' },
   { label: 'Serviços', href: '#services' },
+  { label: 'Qualificações', href: '#qualifications' },
   { label: 'Portfólio', href: '#portfolio' },
   { label: 'Contato', href: '#contact' },
 ];
@@ -25,23 +26,22 @@ export const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-card/95 backdrop-blur-md shadow-card' : 'bg-transparent'
+        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="font-display text-xl font-semibold text-foreground flex items-center gap-2">
-            <span className="text-2xl text-primary">R</span>
-            <span>Renan</span>
+          <a href="#home" className="font-display text-xl font-bold text-foreground tracking-tight">
+            <span className="text-2xl">R</span>enan<span className="text-muted-foreground">.</span>
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-foreground after:transition-all hover:after:w-full"
                 >
                   {item.label}
                 </a>
@@ -52,7 +52,7 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -60,13 +60,13 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <ul className="md:hidden mt-4 py-4 space-y-4 border-t border-border">
+          <ul className="lg:hidden mt-4 py-4 space-y-4 border-t border-border bg-background">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
                   {item.label}
                 </a>
