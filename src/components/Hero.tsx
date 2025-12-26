@@ -3,103 +3,93 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-32 relative">
-      <div className="container mx-auto px-6">
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-32 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-foreground/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-foreground/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+      </div>
+
+      <div className="container mx-auto px-6 relative">
         <div className="flex flex-col items-center text-center">
           {/* Social Links - Left Side */}
           <div className="hidden lg:flex flex-col gap-5 fixed left-8 top-1/2 -translate-y-1/2 z-40">
-            <a
-              href="https://instagram.com/mr.renan1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-              aria-label="Instagram"
-            >
-              <Instagram size={18} />
-            </a>
-            <a
-              href="https://github.com/Draxsd3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-              aria-label="GitHub"
-            >
-              <Github size={18} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={18} />
-            </a>
+            {[
+              { href: 'https://instagram.com/mr.renan1', icon: Instagram, label: 'Instagram', delay: '0.1s' },
+              { href: 'https://github.com/Draxsd3', icon: Github, label: 'GitHub', delay: '0.2s' },
+              { href: 'https://linkedin.com', icon: Linkedin, label: 'LinkedIn', delay: '0.3s' },
+            ].map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground hover:scale-125 hover:-translate-x-1 transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: social.delay }}
+                aria-label={social.label}
+              >
+                <social.icon size={18} />
+              </a>
+            ))}
           </div>
 
           {/* Profile Image */}
-          <div className="animate-fade-in mb-8">
-            <div className="relative">
-              <div className="w-48 h-48 md:w-56 md:h-56 blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg">
+          <div className="animate-bounce-in mb-8">
+            <div className="relative group">
+              <div className="w-48 h-48 md:w-56 md:h-56 blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105 animate-glow">
                 <img
                   src={profilePhoto}
                   alt="Renan Ramos - Desenvolvedor FullStack"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
+              {/* Decorative ring */}
+              <div className="absolute inset-0 blob-shape border-2 border-foreground/20 scale-110 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500" />
             </div>
           </div>
 
           {/* Content */}
-          <div className="animate-fade-in-up">
+          <div className="animate-blur-in" style={{ animationDelay: '0.3s' }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 tracking-tight">
               Renan Ramos{' '}
               <span className="inline-block wave-emoji">👋</span>
             </h1>
             <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="w-16 h-[2px] bg-foreground"></span>
-              <h2 className="text-lg md:text-xl text-muted-foreground font-medium">
+              <span className="w-16 h-[2px] bg-foreground origin-right animate-slide-in-left" style={{ animationDelay: '0.5s' }}></span>
+              <h2 className="text-lg md:text-xl text-muted-foreground font-medium animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 FullStack Developer
               </h2>
-              <span className="w-16 h-[2px] bg-foreground"></span>
+              <span className="w-16 h-[2px] bg-foreground origin-left animate-slide-in-right" style={{ animationDelay: '0.5s' }}></span>
             </div>
-            <p className="text-muted-foreground max-w-lg mx-auto mb-8 leading-relaxed text-base">
+            <p className="text-muted-foreground max-w-lg mx-auto mb-8 leading-relaxed text-base animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
               Desenvolvedor de software apaixonado por tecnologia e pela criação de soluções inovadoras para desafios complexos. Especializado em criar experiências digitais de alta qualidade.
             </p>
 
-            <div className="flex justify-center gap-4">
-              <a href="#contact" className="btn-primary">
+            <div className="flex justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+              <a href="#contact" className="btn-primary group">
                 Say Hello
-                <Send size={18} />
+                <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </a>
             </div>
 
             {/* Mobile Social Links */}
             <div className="flex lg:hidden justify-center gap-5 mt-8">
-              <a
-                href="https://instagram.com/mr.renan1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://github.com/Draxsd3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                <Linkedin size={20} />
-              </a>
+              {[
+                { href: 'https://instagram.com/mr.renan1', icon: Instagram, delay: '1s' },
+                { href: 'https://github.com/Draxsd3', icon: Github, delay: '1.1s' },
+                { href: 'https://linkedin.com', icon: Linkedin, delay: '1.2s' },
+              ].map((social) => (
+                <a
+                  key={social.href}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground hover:scale-125 transition-all duration-300 animate-bounce-in"
+                  style={{ animationDelay: social.delay }}
+                >
+                  <social.icon size={20} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -107,7 +97,8 @@ export const Hero = () => {
         {/* Scroll Indicator */}
         <a 
           href="#about" 
-          className="hidden md:flex flex-col items-center gap-3 absolute bottom-12 left-1/2 -translate-x-1/2 group cursor-pointer"
+          className="hidden md:flex flex-col items-center gap-3 absolute bottom-12 left-1/2 -translate-x-1/2 group cursor-pointer animate-fade-in"
+          style={{ animationDelay: '1.2s' }}
         >
           <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase group-hover:text-foreground transition-colors duration-300">
             Scroll

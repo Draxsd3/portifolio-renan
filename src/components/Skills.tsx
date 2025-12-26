@@ -24,42 +24,50 @@ interface SkillCardProps {
   icon: React.ElementType;
   skills: typeof frontendSkills;
   defaultOpen?: boolean;
+  delay?: string;
 }
 
-const SkillCard = ({ title, icon: Icon, skills, defaultOpen = false }: SkillCardProps) => {
+const SkillCard = ({ title, icon: Icon, skills, defaultOpen = false, delay = '0s' }: SkillCardProps) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="bg-background border border-border rounded-2xl overflow-hidden hover:shadow-card transition-shadow duration-300">
+    <div 
+      className="bg-background border border-border rounded-2xl overflow-hidden hover:shadow-card hover-glow transition-all duration-300 animate-fade-in-up"
+      style={{ animationDelay: delay }}
+    >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-6 hover:bg-secondary/50 transition-colors duration-200"
+        className="w-full flex items-center justify-between p-6 hover:bg-secondary/50 transition-colors duration-200 group"
       >
         <div className="flex items-center gap-3">
-          <Icon size={22} className="text-foreground" />
+          <Icon size={22} className="text-foreground group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
           <h3 className="font-display text-lg font-semibold text-foreground">{title}</h3>
         </div>
-        {isOpen ? (
-          <ChevronUp size={20} className="text-foreground" />
-        ) : (
-          <ChevronDown size={20} className="text-muted-foreground" />
-        )}
+        <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+          <ChevronDown size={20} className={isOpen ? 'text-foreground' : 'text-muted-foreground'} />
+        </div>
       </button>
 
-      <div className={`grid transition-all duration-300 ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+      <div className={`grid transition-all duration-500 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
         <div className="overflow-hidden">
           <div className="px-6 pb-6 space-y-5">
-            {skills.map((skill) => (
-              <div key={skill.name}>
+            {skills.map((skill, index) => (
+              <div key={skill.name} className="group/skill">
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                  <span className="text-xs text-muted-foreground font-medium">{skill.percentage}%</span>
+                  <span className="text-sm font-medium text-foreground group-hover/skill:translate-x-1 transition-transform duration-300">{skill.name}</span>
+                  <span className="text-xs text-muted-foreground font-medium group-hover/skill:text-foreground transition-colors duration-300">{skill.percentage}%</span>
                 </div>
-                <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                <div className="h-2 bg-secondary rounded-full overflow-hidden relative">
                   <div
-                    className="h-full bg-foreground rounded-full transition-all duration-700 ease-out"
-                    style={{ width: isOpen ? `${skill.percentage}%` : '0%' }}
-                  />
+                    className="h-full bg-foreground rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
+                    style={{ 
+                      width: isOpen ? `${skill.percentage}%` : '0%',
+                      transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
+                    }}
+                  >
+                    {/* Shimmer effect */}
+                    <div className="absolute inset-0 animate-shimmer" />
+                  </div>
                 </div>
               </div>
             ))}
@@ -72,16 +80,16 @@ const SkillCard = ({ title, icon: Icon, skills, defaultOpen = false }: SkillCard
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-24 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title">Skills</h2>
-          <p className="section-subtitle">My technical level</p>
+          <h2 className="section-title animate-fade-in-up">Skills</h2>
+          <p className="section-subtitle animate-fade-in-up" style={{ animationDelay: '0.1s' }}>My technical level</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <SkillCard title="Frontend Developer" icon={Code} skills={frontendSkills} defaultOpen={true} />
-          <SkillCard title="Backend Developer" icon={Server} skills={backendSkills} defaultOpen={true} />
+          <SkillCard title="Frontend Developer" icon={Code} skills={frontendSkills} defaultOpen={true} delay="0.2s" />
+          <SkillCard title="Backend Developer" icon={Server} skills={backendSkills} defaultOpen={true} delay="0.3s" />
         </div>
       </div>
     </section>
