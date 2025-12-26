@@ -45,7 +45,7 @@ import creditoIAValores from '@/assets/credito-ia-valores.png';
 import creditoIAFeedback from '@/assets/credito-ia-feedback.png';
 import creditoIAResultado from '@/assets/credito-ia-resultado.jpg';
 
-const filters = ['All', 'Web', 'App', 'Design'];
+const filters = ['All', 'App', 'Automações', 'Websites'];
 
 interface Project {
   title: string;
@@ -70,7 +70,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'WebSite Biocode',
-    category: 'Web',
+    category: 'Websites',
     description: 'BioCode desenvolve software sustentável, combinando tecnologia e responsabilidade ambiental para soluções inovadoras e eficientes.',
     tags: ['HTML', 'CSS', 'JavaScript'],
     image: biocodeHome,
@@ -107,7 +107,7 @@ const projects: Project[] = [
   },
   {
     title: 'Website Gold Credit',
-    category: 'Web',
+    category: 'Websites',
     description: 'Website corporativo para Gold Credit, empresa de antecipação de recebíveis, projetado com elegância e profissionalismo.',
     tags: ['React.js', 'TypeScript', 'Vite'],
     image: goldcreditHome,
@@ -186,7 +186,7 @@ const projects: Project[] = [
   },
   {
     title: 'Análise de Crédito com IA',
-    category: 'App',
+    category: 'Automações',
     description: 'Sistema inteligente de análise de crédito utilizando agente RAG que aprende continuamente com feedbacks dos analistas.',
     tags: ['React.js', 'Node.js', 'OpenAI', 'RAG'],
     image: creditoIAFluxo,
