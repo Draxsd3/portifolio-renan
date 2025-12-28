@@ -3,16 +3,16 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex flex-col justify-center pt-20 pb-8 md:pb-12 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-foreground/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-foreground/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-20 left-10 w-48 md:w-72 h-48 md:h-72 bg-foreground/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-foreground/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
       </div>
 
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-4 sm:px-6 relative flex-1 flex flex-col justify-center">
         <div className="flex flex-col items-center text-center">
-          {/* Social Links - Left Side */}
+          {/* Social Links - Left Side (Desktop only) */}
           <div className="hidden lg:flex flex-col gap-5 fixed left-8 top-1/2 -translate-y-1/2 z-40">
             {[
               { href: 'https://instagram.com/mr.renan1', icon: Instagram, label: 'Instagram', delay: '0.1s' },
@@ -34,9 +34,9 @@ export const Hero = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="animate-bounce-in mb-8">
+          <div className="animate-bounce-in mb-6 md:mb-8">
             <div className="relative group">
-              <div className="w-48 h-48 md:w-56 md:h-56 blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105 animate-glow">
+              <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105 animate-glow">
                 <img
                   src={profilePhoto}
                   alt="Renan Ramos - Desenvolvedor FullStack"
@@ -50,18 +50,18 @@ export const Hero = () => {
 
           {/* Content */}
           <div className="animate-blur-in" style={{ animationDelay: '0.3s' }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-3 md:mb-4 tracking-tight">
               Renan Ramos{' '}
               <span className="inline-block wave-emoji">👋</span>
             </h1>
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="w-16 h-[2px] bg-foreground origin-right animate-slide-in-left" style={{ animationDelay: '0.5s' }}></span>
-              <h2 className="text-lg md:text-xl text-muted-foreground font-medium animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="flex items-center justify-center gap-2 sm:gap-4 mb-4 md:mb-6">
+              <span className="w-8 sm:w-12 md:w-16 h-[2px] bg-foreground origin-right animate-slide-in-left" style={{ animationDelay: '0.5s' }}></span>
+              <h2 className="text-base sm:text-lg md:text-xl text-muted-foreground font-medium animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 FullStack Developer
               </h2>
-              <span className="w-16 h-[2px] bg-foreground origin-left animate-slide-in-right" style={{ animationDelay: '0.5s' }}></span>
+              <span className="w-8 sm:w-12 md:w-16 h-[2px] bg-foreground origin-left animate-slide-in-right" style={{ animationDelay: '0.5s' }}></span>
             </div>
-            <p className="text-muted-foreground max-w-lg mx-auto mb-8 leading-relaxed text-base animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+            <p className="text-muted-foreground max-w-md md:max-w-lg mx-auto mb-6 md:mb-8 leading-relaxed text-sm sm:text-base px-2 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
               Desenvolvedor de software apaixonado por tecnologia e pela criação de soluções inovadoras para desafios complexos. Especializado em criar experiências digitais de alta qualidade.
             </p>
 
@@ -73,7 +73,7 @@ export const Hero = () => {
             </div>
 
             {/* Mobile Social Links */}
-            <div className="flex lg:hidden justify-center gap-5 mt-8">
+            <div className="flex lg:hidden justify-center gap-5 mt-6 md:mt-8">
               {[
                 { href: 'https://instagram.com/mr.renan1', icon: Instagram, delay: '1s' },
                 { href: 'https://github.com/Draxsd3', icon: Github, delay: '1.1s' },
@@ -93,21 +93,21 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <a 
-          href="#about" 
-          className="hidden md:flex flex-col items-center gap-2 absolute -bottom-8 left-1/2 -translate-x-1/2 group cursor-pointer animate-fade-in"
-          style={{ animationDelay: '1.2s' }}
-        >
-          <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase group-hover:text-foreground transition-colors duration-300">
-            Scroll
-          </span>
-          <div className="relative w-5 h-8 border-2 border-muted-foreground/50 rounded-full group-hover:border-foreground/70 transition-colors duration-300">
-            <div className="absolute left-1/2 -translate-x-1/2 top-1.5 w-1 h-1.5 bg-muted-foreground rounded-full animate-scroll-bounce group-hover:bg-foreground transition-colors duration-300" />
-          </div>
-        </a>
       </div>
+
+      {/* Scroll Indicator - Positioned at bottom of section */}
+      <a 
+        href="#about" 
+        className="hidden md:flex flex-col items-center gap-2 mt-8 group cursor-pointer animate-fade-in self-center"
+        style={{ animationDelay: '1.2s' }}
+      >
+        <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase group-hover:text-foreground transition-colors duration-300">
+          Scroll
+        </span>
+        <div className="relative w-5 h-8 border-2 border-muted-foreground/50 rounded-full group-hover:border-foreground/70 transition-colors duration-300">
+          <div className="absolute left-1/2 -translate-x-1/2 top-1.5 w-1 h-1.5 bg-muted-foreground rounded-full animate-scroll-bounce group-hover:bg-foreground transition-colors duration-300" />
+        </div>
+      </a>
     </section>
   );
 };

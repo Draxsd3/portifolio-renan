@@ -234,20 +234,20 @@ export const Portfolio = () => {
     : projects.filter(p => p.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
+    <section id="portfolio" className="py-16 md:py-24 bg-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="section-title">Portfolio</h2>
           <p className="section-subtitle">My Recent Work</p>
         </div>
 
         {/* Filters */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+        <div className="flex justify-center gap-2 sm:gap-4 mb-8 md:mb-12 flex-wrap">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              className={`px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 ${
                 activeFilter === filter
                   ? 'bg-foreground text-background'
                   : 'bg-background border border-border text-muted-foreground hover:border-foreground hover:text-foreground'
@@ -258,7 +258,7 @@ export const Portfolio = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto">
           {filteredProjects.map((project, index) => (
             <div
               key={project.title}
