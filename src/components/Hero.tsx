@@ -3,7 +3,7 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-32 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-foreground/5 rounded-full blur-3xl animate-float" />
@@ -97,14 +97,14 @@ export const Hero = () => {
         {/* Scroll Indicator */}
         <a 
           href="#about" 
-          className="hidden md:flex flex-col items-center gap-3 absolute bottom-12 left-1/2 -translate-x-1/2 group cursor-pointer animate-fade-in"
+          className="hidden md:flex flex-col items-center gap-2 absolute -bottom-8 left-1/2 -translate-x-1/2 group cursor-pointer animate-fade-in"
           style={{ animationDelay: '1.2s' }}
         >
           <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase group-hover:text-foreground transition-colors duration-300">
             Scroll
           </span>
-          <div className="relative w-6 h-10 border-2 border-muted-foreground/50 rounded-full group-hover:border-foreground/70 transition-colors duration-300">
-            <div className="absolute left-1/2 -translate-x-1/2 top-2 w-1 h-2 bg-muted-foreground rounded-full animate-scroll-bounce group-hover:bg-foreground transition-colors duration-300" />
+          <div className="relative w-5 h-8 border-2 border-muted-foreground/50 rounded-full group-hover:border-foreground/70 transition-colors duration-300">
+            <div className="absolute left-1/2 -translate-x-1/2 top-1.5 w-1 h-1.5 bg-muted-foreground rounded-full animate-scroll-bounce group-hover:bg-foreground transition-colors duration-300" />
           </div>
         </a>
       </div>
