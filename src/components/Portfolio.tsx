@@ -38,6 +38,9 @@ import crmMetricas from '@/assets/crm-metricas.png';
 import crmAgenda from '@/assets/crm-agenda.png';
 import crmPipeline from '@/assets/crm-pipeline.png';
 
+// Gestão Escolar screenshot
+import gestaoEscolarDashboard from '@/assets/gestao-escolar-dashboard.jpg';
+
 // Sistema de Análise de Crédito com IA screenshots
 import creditoIAFluxo from '@/assets/credito-ia-fluxo.png';
 import creditoIAAnalise from '@/assets/credito-ia-analise.png';
@@ -221,6 +224,42 @@ const projects: Project[] = [
         'Gráfico radar de perfil de risco',
       ],
       description: 'Sistema de análise de crédito inteligente desenvolvido para a Gold Credit. Utiliza um agente RAG (Retrieval Augmented Generation) que analisa documentos financeiros e gera pareceres automáticos. O diferencial é o sistema de aprendizado contínuo: cada feedback dos analistas é armazenado como embedding no Supabase Vector Store, permitindo que a IA aprenda com decisões passadas e melhore suas análises futuras.',
+    },
+  },
+  {
+    title: 'Babel — Gestão Escolar',
+    category: 'App',
+    description: 'Sistema completo de gestão escolar fullstack com controle de alunos, turmas, notas, frequência, financeiro e painel administrativo.',
+    tags: ['React.js', 'Laravel', 'MySQL'],
+    image: gestaoEscolarDashboard,
+    demoUrl: '#',
+    codeUrl: 'https://github.com/Draxsd3/gestao-escolar-fullstack',
+    screenshots: [
+      gestaoEscolarDashboard,
+    ],
+    development: {
+      duration: '3 semanas',
+      team: 'Solo',
+      year: '2026',
+      challenges: [
+        'Implementar controle de acesso por 6 perfis diferentes',
+        'Integração completa entre API Laravel e frontend React',
+        'Sistema de lançamento de notas com cálculo automático de média',
+        'Controle financeiro com registro de pagamentos e inadimplentes',
+        'Testes automatizados para autenticação e permissões',
+      ],
+      technologies: ['React 18', 'Vite 5', 'Laravel 11', 'PHP 8.2', 'MySQL 8', 'Laravel Sanctum', 'Axios', 'Recharts', 'React Router DOM'],
+      features: [
+        'Login com autenticação por token (Sanctum)',
+        'Dashboard personalizado por perfil de usuário',
+        'Gestão de alunos com histórico escolar e boletim',
+        'Controle de turmas com associação de alunos e professores',
+        'Lançamento de notas por disciplina',
+        'Registro de frequência com relatórios',
+        'Controle financeiro de mensalidades',
+        'Sistema de comunicados por perfil',
+      ],
+      description: 'Sistema de gestão escolar fullstack desenvolvido com Laravel 11 no backend, React + Vite no frontend e MySQL 8 como banco de dados. O projeto simula um sistema real utilizado por escolas, com 6 perfis de acesso (Administrador, Secretaria, Coordenação, Professor, Responsável e Aluno), cada um com permissões específicas. Inclui testes automatizados para validar autenticação e operações principais.',
     },
   },
 ];
