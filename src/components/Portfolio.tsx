@@ -29,11 +29,10 @@ import goldcreditAtuacao from '@/assets/goldcredit-atuacao.png';
 import goldcreditDiferenciais from '@/assets/goldcredit-diferenciais.png';
 import goldcreditFooter from '@/assets/goldcredit-footer.png';
 
-// CRM Gold Credit screenshots
+// CRM Leads screenshots
 import crmLogin from '@/assets/crm-login.png';
 import crmDashboard from '@/assets/crm-dashboard.png';
 import crmLeads from '@/assets/crm-leads.png';
-import crmVideoIA from '@/assets/crm-video-ia.png';
 import crmMetricas from '@/assets/crm-metricas.png';
 import crmAgenda from '@/assets/crm-agenda.png';
 import crmPipeline from '@/assets/crm-pipeline.png';
@@ -63,6 +62,7 @@ const techIcons: Record<string, string> = {
   'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
   'React.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  'Express': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
   'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
   'PHP/Laravel': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',
   'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
@@ -168,13 +168,13 @@ const projects: Project[] = [
     },
   },
   {
-    title: 'CRM Gold Credit',
+    title: 'CRM Leads',
     category: 'App',
-    description: 'Sistema CRM sob medida com integração de IA, Google Agenda e gestão completa de leads e pipeline de vendas.',
+    description: 'CRM full stack para gestão de leads, pipeline comercial com drag and drop, agenda de reuniões e relatórios operacionais com controle por perfil (RBAC).',
     tags: ['React.js', 'Node.js', 'MongoDB'],
     image: crmLogin,
     demoUrl: '#',
-    codeUrl: '#',
+    codeUrl: 'https://github.com/Draxsd3/crm-fullstack',
     screenshots: [
       crmLogin,
       crmDashboard,
@@ -182,30 +182,30 @@ const projects: Project[] = [
       crmLeads,
       crmAgenda,
       crmMetricas,
-      crmVideoIA,
     ],
     development: {
-      duration: '6 meses',
+      duration: '3 meses',
       team: 'Solo',
-      year: '2024',
+      year: '2026',
       challenges: [
-        'Integração com Google Calendar API',
-        'Implementação de IA para resumo de vídeos',
-        'Sistema de pipeline visual estilo Kanban',
-        'Gestão de permissões por departamento',
-        'Relatórios e métricas em tempo real',
+        'Pipeline visual com drag and drop (@hello-pangea/dnd)',
+        'Autenticação JWT com controle por papéis (ADM, SDR, Closer, Supervisor)',
+        'Integração externa para consulta de CNPJ com fallback de provedores (BrasilAPI + ReceitaWS)',
+        'Exportação de relatórios em PDF (PDFKit) e Excel (ExcelJS)',
+        'Arquitetura em camadas no backend (routes → controllers → services → models)',
       ],
-      technologies: ['React.js', 'Vite', 'Node.js', 'MongoDB Atlas', 'Vercel', 'Hostinger', 'OpenAI API', 'Google Calendar API'],
+      technologies: ['React 18', 'Material UI', 'Chart.js', 'React Big Calendar', 'Node.js', 'Express', 'Mongoose', 'MongoDB', 'JWT', 'PDFKit', 'ExcelJS'],
       features: [
-        'Login seguro com autenticação',
-        'Dashboard com métricas de conversão',
-        'Pipeline visual de vendas (Kanban)',
-        'Gestão de leads frios com calendário',
-        'Agenda integrada com Google Calendar',
-        'Relatórios de conversão e desempenho',
-        'Resumo de vídeo com IA (Whisper + GPT)',
+        'Login com sessão JWT e controle por perfil (RBAC)',
+        'Dashboard com indicadores e gráfico de pipeline',
+        'Gestão de empresas (CRUD) com consulta automática de CNPJ',
+        'Pipeline de vendas com mudança de status por arrastar e soltar',
+        'Agenda de reuniões com visualização em calendário',
+        'KYC e histórico de movimentações por empresa',
+        'Relatórios com filtros e exportação em PDF/Excel',
+        'Perfil de usuário com upload de foto',
       ],
-      description: 'CRM completo desenvolvido sob medida para a Gold Credit. O sistema oferece gestão inteligente de relacionamento com clientes, incluindo pipeline visual de vendas, integração com Google Agenda para reuniões, e funcionalidade de IA para transcrição e resumo automático de vídeos de reuniões. Hospedado na Vercel (frontend), Hostinger (backend) e MongoDB Atlas (database).',
+      description: 'CRM full stack para times comerciais que precisam centralizar cadastro de empresas e contatos, controlar o funil de vendas com pipeline visual (drag and drop), gerenciar agenda de reuniões e acompanhar conversão com dashboards e relatórios. Arquitetura em camadas no backend com Express e Mongoose, frontend modular com React + Context API para autenticação e notificações. Inclui integração externa para consulta de CNPJ, exportação de relatórios em PDF/Excel e controle de acesso por 4 perfis diferentes.',
     },
   },
   {
