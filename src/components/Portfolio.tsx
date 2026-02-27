@@ -38,8 +38,14 @@ import crmMetricas from '@/assets/crm-metricas.png';
 import crmAgenda from '@/assets/crm-agenda.png';
 import crmPipeline from '@/assets/crm-pipeline.png';
 
-// Gestão Escolar screenshot
-import gestaoEscolarDashboard from '@/assets/gestao-escolar-dashboard.jpg';
+// Babel - Gestão Escolar screenshots
+import babelHome from '@/assets/babel-home.png';
+import babelLogin from '@/assets/babel-login.png';
+import babelDashboard from '@/assets/babel-dashboard.png';
+import babelGestao from '@/assets/babel-gestao.png';
+import babelAlunos from '@/assets/babel-alunos.png';
+import babelMensagens from '@/assets/babel-mensagens.png';
+import babelFinanceiro from '@/assets/babel-financeiro.png';
 
 // Sistema de Análise de Crédito com IA screenshots
 import creditoIAFluxo from '@/assets/credito-ia-fluxo.png';
@@ -230,12 +236,18 @@ const projects: Project[] = [
     title: 'Babel — Gestão Escolar',
     category: 'App',
     description: 'Sistema completo de gestão escolar fullstack com controle de alunos, turmas, notas, frequência, financeiro e painel administrativo.',
-    tags: ['React.js', 'Laravel', 'MySQL'],
-    image: gestaoEscolarDashboard,
+    tags: ['PHP/Laravel', 'React.js', 'MySQL'],
+    image: babelDashboard,
     demoUrl: '#',
     codeUrl: 'https://github.com/Draxsd3/gestao-escolar-fullstack',
     screenshots: [
-      gestaoEscolarDashboard,
+      babelHome,
+      babelLogin,
+      babelDashboard,
+      babelGestao,
+      babelAlunos,
+      babelMensagens,
+      babelFinanceiro,
     ],
     development: {
       duration: '3 semanas',
@@ -244,22 +256,22 @@ const projects: Project[] = [
       challenges: [
         'Implementar controle de acesso por 6 perfis diferentes',
         'Integração completa entre API Laravel e frontend React',
-        'Sistema de lançamento de notas com cálculo automático de média',
+        'Sistema de mensagens internas em tempo real entre perfis',
         'Controle financeiro com registro de pagamentos e inadimplentes',
         'Testes automatizados para autenticação e permissões',
       ],
-      technologies: ['React 18', 'Vite 5', 'Laravel 11', 'PHP 8.2', 'MySQL 8', 'Laravel Sanctum', 'Axios', 'Recharts', 'React Router DOM'],
+      technologies: ['PHP 8.2', 'Laravel 11', 'Laravel Sanctum', 'React 18', 'Vite 5', 'MySQL 8', 'Axios', 'Recharts', 'React Router DOM'],
       features: [
         'Login com autenticação por token (Sanctum)',
         'Dashboard personalizado por perfil de usuário',
         'Gestão de alunos com histórico escolar e boletim',
         'Controle de turmas com associação de alunos e professores',
-        'Lançamento de notas por disciplina',
+        'Sistema de mensagens internas com chat em tempo real',
         'Registro de frequência com relatórios',
-        'Controle financeiro de mensalidades',
+        'Controle financeiro de mensalidades e inadimplentes',
         'Sistema de comunicados por perfil',
       ],
-      description: 'Sistema de gestão escolar fullstack desenvolvido com Laravel 11 no backend, React + Vite no frontend e MySQL 8 como banco de dados. O projeto simula um sistema real utilizado por escolas, com 6 perfis de acesso (Administrador, Secretaria, Coordenação, Professor, Responsável e Aluno), cada um com permissões específicas. Inclui testes automatizados para validar autenticação e operações principais.',
+      description: 'Sistema de gestão escolar fullstack desenvolvido com Laravel 11 no backend, React + Vite no frontend e MySQL 8 como banco de dados. O projeto simula um sistema real utilizado por escolas, com 6 perfis de acesso (Administrador, Secretaria, Coordenação, Professor, Responsável e Aluno), cada um com permissões específicas. Destaque para o sistema de mensagens internas com chat entre perfis e o módulo financeiro completo com controle de mensalidades. Inclui testes automatizados para validar autenticação e operações principais.',
     },
   },
 ];
