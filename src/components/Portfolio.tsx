@@ -252,7 +252,7 @@ const projects: Project[] = [
     category: 'App',
     description: 'Sistema completo de gestão escolar fullstack com controle de alunos, turmas, notas, frequência, financeiro e painel administrativo.',
     tags: ['PHP/Laravel', 'React.js', 'MySQL'],
-    image: babelDashboard,
+    image: babelLogin,
     demoUrl: '#',
     codeUrl: 'https://github.com/Draxsd3/gestao-escolar-fullstack',
     screenshots: [
