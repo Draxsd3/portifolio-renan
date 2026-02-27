@@ -56,6 +56,21 @@ import creditoIAResultado from '@/assets/credito-ia-resultado.jpg';
 
 const filters = ['All', 'App', 'Automações', 'Websites'];
 
+const techIcons: Record<string, string> = {
+  'HTML': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+  'CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  'React.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+  'PHP/Laravel': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',
+  'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  'Vite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
+  'OpenAI': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openai/openai-original.svg',
+  'RAG': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openai/openai-original.svg',
+};
+
 interface Project {
   title: string;
   category: string;
@@ -351,9 +366,12 @@ export const Portfolio = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full font-medium transition-all duration-300 group-hover:bg-foreground group-hover:text-background"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full font-medium transition-all duration-300 group-hover:bg-foreground group-hover:text-background"
                       style={{ transitionDelay: `${tagIndex * 50}ms` }}
                     >
+                      {techIcons[tag] && (
+                        <img src={techIcons[tag]} alt={tag} className="w-3.5 h-3.5" />
+                      )}
                       {tag}
                     </span>
                   ))}
