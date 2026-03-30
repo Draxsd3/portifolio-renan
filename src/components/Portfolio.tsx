@@ -15,43 +15,43 @@ import {
 } from '@/components/ui/carousel';
 
 // Biocode screenshots
-import biocodeHome from '@/assets/biocode-home.png';
-import biocodeSobre from '@/assets/biocode-sobre.png';
-import biocodeTime from '@/assets/biocode-time.png';
-import biocodeExibicoes from '@/assets/biocode-exibicoes.png';
-import biocodeContato from '@/assets/biocode-contato.png';
+import biocodeHome from '@/assets/biocode-home.webp';
+import biocodeSobre from '@/assets/biocode-sobre.webp';
+import biocodeTime from '@/assets/biocode-time.webp';
+import biocodeExibicoes from '@/assets/biocode-exibicoes.webp';
+import biocodeContato from '@/assets/biocode-contato.webp';
 
 // Gold Credit screenshots
-import goldcreditHome from '@/assets/goldcredit-home.png';
-import goldcreditSolucoes from '@/assets/goldcredit-solucoes.png';
-import goldcreditSobre from '@/assets/goldcredit-sobre.png';
-import goldcreditAtuacao from '@/assets/goldcredit-atuacao.png';
-import goldcreditDiferenciais from '@/assets/goldcredit-diferenciais.png';
-import goldcreditFooter from '@/assets/goldcredit-footer.png';
+import goldcreditHome from '@/assets/goldcredit-home.webp';
+import goldcreditSolucoes from '@/assets/goldcredit-solucoes.webp';
+import goldcreditSobre from '@/assets/goldcredit-sobre.webp';
+import goldcreditAtuacao from '@/assets/goldcredit-atuacao.webp';
+import goldcreditDiferenciais from '@/assets/goldcredit-diferenciais.webp';
+import goldcreditFooter from '@/assets/goldcredit-footer.webp';
 
 // CRM Leads screenshots
-import crmLogin from '@/assets/crm-login.png';
-import crmDashboard from '@/assets/crm-dashboard.png';
-import crmLeads from '@/assets/crm-leads.png';
-import crmMetricas from '@/assets/crm-metricas.png';
-import crmAgenda from '@/assets/crm-agenda.png';
-import crmPipeline from '@/assets/crm-pipeline.png';
+import crmLogin from '@/assets/crm-login.webp';
+import crmDashboard from '@/assets/crm-dashboard.webp';
+import crmLeads from '@/assets/crm-leads.webp';
+import crmMetricas from '@/assets/crm-metricas.webp';
+import crmAgenda from '@/assets/crm-agenda.webp';
+import crmPipeline from '@/assets/crm-pipeline.webp';
 
 // Babel - Gestão Escolar screenshots
-import babelHome from '@/assets/babel-home.png';
-import babelLogin from '@/assets/babel-login.png';
-import babelDashboard from '@/assets/babel-dashboard.png';
-import babelGestao from '@/assets/babel-gestao.png';
-import babelAlunos from '@/assets/babel-alunos.png';
-import babelMensagens from '@/assets/babel-mensagens.png';
-import babelFinanceiro from '@/assets/babel-financeiro.png';
+import babelHome from '@/assets/babel-home.webp';
+import babelLogin from '@/assets/babel-login.webp';
+import babelDashboard from '@/assets/babel-dashboard.webp';
+import babelGestao from '@/assets/babel-gestao.webp';
+import babelAlunos from '@/assets/babel-alunos.webp';
+import babelMensagens from '@/assets/babel-mensagens.webp';
+import babelFinanceiro from '@/assets/babel-financeiro.webp';
 
 // Sistema de Análise de Crédito com IA screenshots
-import creditoIAFluxo from '@/assets/credito-ia-fluxo.png';
-import creditoIAAnalise from '@/assets/credito-ia-analise.png';
-import creditoIAValores from '@/assets/credito-ia-valores.png';
-import creditoIAFeedback from '@/assets/credito-ia-feedback.png';
-import creditoIAResultado from '@/assets/credito-ia-resultado.jpg';
+import creditoIAFluxo from '@/assets/credito-ia-fluxo.webp';
+import creditoIAAnalise from '@/assets/credito-ia-analise.webp';
+import creditoIAValores from '@/assets/credito-ia-valores.webp';
+import creditoIAFeedback from '@/assets/credito-ia-feedback.webp';
+import creditoIAResultado from '@/assets/credito-ia-resultado.webp';
 
 const filters = ['All', 'App', 'Automações', 'Websites'];
 

@@ -1,5 +1,5 @@
 import { Instagram, Github, Linkedin, Send } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '@/assets/profile-photo.webp';
 
 export const Hero = () => {
   return (
