@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Code, Server, Palette, ArrowRight, X } from 'lucide-react';
+import { Code, Server, Bot, ArrowRight, X } from 'lucide-react';
 
 const services = [
   {
@@ -27,15 +27,15 @@ const services = [
     ],
   },
   {
-    icon: Palette,
-    title: 'UI/UX Designer',
-    shortDesc: 'Design de interfaces intuitivas, modernas e acessíveis',
-    fullDesc: 'Serviço com um olhar atento para design, criando experiências visualmente atraentes e amigáveis ao usuário.',
+    icon: Bot,
+    title: 'IA & Automação',
+    shortDesc: 'Integração de modelos de linguagem, automação de processos e fluxos inteligentes com n8n e APIs',
+    fullDesc: 'Desenvolvimento de soluções inteligentes integrando modelos de IA, automação de fluxos de trabalho e processos de negócio.',
     features: [
-      'Design de elementos UI e layouts responsivos',
-      'Criação de identidades visuais e conceitos',
-      'Garantia de consistência no design visual',
-      'Design de mockups e protótipos interativos',
+      'Integração de modelos de linguagem (LLMs) em sistemas',
+      'Automação de processos com n8n e APIs REST',
+      'Criação de agentes RAG para análise de dados',
+      'Fluxos inteligentes para operações financeiras',
     ],
   },
 ];

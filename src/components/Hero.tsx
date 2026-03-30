@@ -51,18 +51,17 @@ export const Hero = () => {
           {/* Content */}
           <div className="animate-blur-in" style={{ animationDelay: '0.3s' }}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-3 md:mb-4 tracking-tight">
-              Renan Ramos{' '}
-              <span className="inline-block wave-emoji">👋</span>
+              Renan Ramos
             </h1>
             <div className="flex items-center justify-center gap-2 sm:gap-4 mb-4 md:mb-6">
               <span className="w-8 sm:w-12 md:w-16 h-[2px] bg-foreground origin-right animate-slide-in-left" style={{ animationDelay: '0.5s' }}></span>
               <h2 className="text-base sm:text-lg md:text-xl text-muted-foreground font-medium animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                FullStack Developer
+                Software Engineer · Back-End & IA Aplicada
               </h2>
               <span className="w-8 sm:w-12 md:w-16 h-[2px] bg-foreground origin-left animate-slide-in-right" style={{ animationDelay: '0.5s' }}></span>
             </div>
             <p className="text-muted-foreground max-w-md md:max-w-lg mx-auto mb-6 md:mb-8 leading-relaxed text-sm sm:text-base px-2 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-              Desenvolvedor de software apaixonado por tecnologia e pela criação de soluções inovadoras para desafios complexos. Especializado em criar experiências digitais de alta qualidade.
+              Engenheiro de software especializado em back-end, automação de processos e aplicação de inteligência artificial em operações financeiras e de negócio.
             </p>
 
             <div className="flex justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
