@@ -1,34 +1,51 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Code, Server } from 'lucide-react';
+import { ChevronDown, Code, Server } from 'lucide-react';
 
-const frontendSkills = [
-  { name: 'Next.js', level: 'Advanced', percentage: 90 },
-  { name: 'CSS', level: 'Advanced', percentage: 90 },
-  { name: 'JavaScript', level: 'Intermediate', percentage: 80 },
-  { name: 'React', level: 'Intermediate', percentage: 75 },
-  { name: 'TypeScript', level: 'Intermediate', percentage: 70 },
-  { name: 'Vue', level: 'Basic', percentage: 55 },
+interface Skill {
+  name: string;
+  level: 'Avançado' | 'Intermediário' | 'Básico';
+}
+
+const frontendSkills: Skill[] = [
+  { name: 'Next.js', level: 'Avançado' },
+  { name: 'CSS', level: 'Avançado' },
+  { name: 'JavaScript', level: 'Intermediário' },
+  { name: 'React', level: 'Intermediário' },
+  { name: 'TypeScript', level: 'Intermediário' },
+  { name: 'Vue', level: 'Básico' },
 ];
 
-const backendSkills = [
-  { name: 'Node.js', level: 'Intermediate', percentage: 75 },
-  { name: 'PHP', level: 'Intermediate', percentage: 70 },
-  { name: 'Python', level: 'Intermediate', percentage: 65 },
-  { name: 'MySQL', level: 'Intermediate', percentage: 75 },
-  { name: 'Firebase', level: 'Intermediate', percentage: 70 },
-  { name: 'MongoDB', level: 'Basic', percentage: 55 },
+const backendSkills: Skill[] = [
+  { name: 'Node.js', level: 'Intermediário' },
+  { name: 'PHP', level: 'Intermediário' },
+  { name: 'Python', level: 'Intermediário' },
+  { name: 'MySQL', level: 'Intermediário' },
+  { name: 'Firebase', level: 'Intermediário' },
+  { name: 'MongoDB', level: 'Básico' },
 ];
+
+const levelColors: Record<string, string> = {
+  'Avançado': 'bg-foreground text-background',
+  'Intermediário': 'bg-foreground/70 text-background',
+  'Básico': 'bg-foreground/40 text-background',
+};
 
 interface SkillCardProps {
   title: string;
   icon: React.ElementType;
-  skills: typeof frontendSkills;
+  skills: Skill[];
   defaultOpen?: boolean;
   delay?: string;
 }
 
 const SkillCard = ({ title, icon: Icon, skills, defaultOpen = false, delay = '0s' }: SkillCardProps) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+
+  const grouped = {
+    'Avançado': skills.filter(s => s.level === 'Avançado'),
+    'Intermediário': skills.filter(s => s.level === 'Intermediário'),
+    'Básico': skills.filter(s => s.level === 'Básico'),
+  };
 
   return (
     <div 
@@ -51,26 +68,23 @@ const SkillCard = ({ title, icon: Icon, skills, defaultOpen = false, delay = '0s
       <div className={`grid transition-all duration-500 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
         <div className="overflow-hidden">
           <div className="px-6 pb-6 space-y-5">
-            {skills.map((skill, index) => (
-              <div key={skill.name} className="group/skill">
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm font-medium text-foreground group-hover/skill:translate-x-1 transition-transform duration-300">{skill.name}</span>
-                  <span className="text-xs text-muted-foreground font-medium group-hover/skill:text-foreground transition-colors duration-300">{skill.percentage}%</span>
-                </div>
-                <div className="h-2 bg-secondary rounded-full overflow-hidden relative">
-                  <div
-                    className="h-full bg-foreground rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
-                    style={{ 
-                      width: isOpen ? `${skill.percentage}%` : '0%',
-                      transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
-                    }}
-                  >
-                    {/* Shimmer effect */}
-                    <div className="absolute inset-0 animate-shimmer" />
+            {Object.entries(grouped).map(([level, items]) => 
+              items.length > 0 && (
+                <div key={level}>
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">{level}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((skill) => (
+                      <span
+                        key={skill.name}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-medium ${levelColors[skill.level]} transition-transform duration-300 hover:scale-105`}
+                      >
+                        {skill.name}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </div>

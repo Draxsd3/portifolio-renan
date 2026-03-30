@@ -2,9 +2,9 @@ import { Award, Briefcase, Headphones, Download } from 'lucide-react';
 import aboutPhoto from '@/assets/about-photo.webp';
 
 const stats = [
-  { icon: Award, label: 'Experience', value: '4+', sublabel: 'Years Working' },
-  { icon: Briefcase, label: 'Completed', value: '48+', sublabel: 'Projects' },
-  { icon: Headphones, label: 'Support', value: '24/7', sublabel: 'Online' },
+  { icon: Award, label: 'Experience', value: '3+', sublabel: 'Years Working' },
+  { icon: Briefcase, label: 'Completed', value: '15+', sublabel: 'Projects' },
+  { icon: Headphones, label: 'Support', value: '✓', sublabel: 'Disponível' },
 ];
 
 export const About = () => {
@@ -54,7 +54,7 @@ export const About = () => {
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-6 md:mb-8 text-sm md:text-base animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              Sou um desenvolvedor de software fullstack com especialização em desenvolvimento front-end e experiência sólida em tecnologias como JavaScript, TypeScript, ReactJS, React Native, NodeJS, Styled-Components e Vue. Também possuo habilidades de desenvolvimento back-end, o que me permite criar aplicações completas, escaláveis e de alta performance que proporcionam experiências excepcionais aos usuários.
+              Atuo como engenheiro de software responsável pela área de tecnologia de uma securitizadora, desenvolvendo sistemas internos, automações e um motor de crédito inteligente integrado a IA. Tenho experiência sólida em back-end com PHP e Node.js, integrações via APIs REST, bancos de dados SQL e ambientes Linux de produção. Meu foco é entregar soluções escaláveis, confiáveis e diretamente alinhadas aos objetivos do negócio.
             </p>
 
             <a 

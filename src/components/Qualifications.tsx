@@ -26,17 +26,12 @@ const education = [
 
 const experience = [
   {
-    title: 'Desenvolvimento de Sistemas',
-    institution: 'Gold Credit',
+    title: 'Software Engineer',
+    institution: 'Gold Credit Securitizadora S/A',
     period: '2024 - Presente',
   },
   {
-    title: 'Software Development',
-    institution: 'Autônomo',
-    period: '2025 - Presente',
-  },
-  {
-    title: 'Web Development',
+    title: 'Desenvolvedor Freelance',
     institution: 'Autônomo',
     period: '2022 - Presente',
   },
