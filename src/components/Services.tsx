@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Code, Server, Bot, ArrowRight, X } from 'lucide-react';
+import { Code, Server, Bot, Workflow, ArrowRight, X } from 'lucide-react';
 
 const services = [
   {
