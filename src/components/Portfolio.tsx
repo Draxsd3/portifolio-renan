@@ -1,5 +1,17 @@
 import { useState } from 'react';
-import { ExternalLink, Github, X, ChevronLeft, ChevronRight, Calendar, Clock, Users } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import {
   Dialog,
   DialogContent,
