@@ -1,41 +1,53 @@
 import { useState } from 'react';
-import { Code, Server, Bot, ArrowRight, X } from 'lucide-react';
+import { Code, Server, Bot, Workflow, ArrowRight, X } from 'lucide-react';
 
 const services = [
   {
-    icon: Code,
-    title: 'Web Developer',
-    shortDesc: 'Desenvolvimento de websites e aplicações web de alta qualidade',
-    fullDesc: 'Serviço com mais de 3 anos de experiência no desenvolvimento de websites e aplicações web de alta qualidade.',
-    features: [
-      'Desenvolvimento de websites e aplicações web responsivas',
-      'Criação de soluções web customizadas com frameworks modernos',
-      'Integração com serviços backend e APIs',
-      'Otimização de performance e SEO',
-    ],
-  },
-  {
     icon: Server,
-    title: 'Back-End Developer',
-    shortDesc: 'Desenvolvimento de sistemas backend robustos e escaláveis',
-    fullDesc: 'Expertise em tecnologias server-side, criando sistemas back-end robustos e escaláveis para aplicações web.',
+    title: 'Back-End Engineering',
+    shortDesc: 'APIs, integrações e sistemas server-side robustos para operações críticas',
+    fullDesc: 'Desenvolvimento e manutenção de aplicações back-end em PHP e Node.js, com foco em performance, segurança e integrações confiáveis em ambientes de produção Linux.',
     features: [
-      'Desenvolvimento e manutenção de lógica server-side',
-      'Trabalho com bancos de dados relacionais e NoSQL',
-      'Criação e documentação de APIs RESTful',
-      'Garantia de alta performance e escalabilidade',
+      'Arquitetura e desenvolvimento de APIs REST documentadas',
+      'Modelagem e otimização de bancos relacionais (MySQL, PostgreSQL)',
+      'Integrações com sistemas legados, ERPs e gateways financeiros',
+      'Deploy, monitoramento e manutenção em servidores Linux',
     ],
   },
   {
     icon: Bot,
-    title: 'IA & Automação',
-    shortDesc: 'Integração de modelos de linguagem, automação de processos e fluxos inteligentes com n8n e APIs',
-    fullDesc: 'Desenvolvimento de soluções inteligentes integrando modelos de IA, automação de fluxos de trabalho e processos de negócio.',
+    title: 'IA Aplicada & LLMs',
+    shortDesc: 'Soluções com GPT, Claude e Gemini aplicadas a problemas reais de negócio',
+    fullDesc: 'Integração de modelos de linguagem em produtos e processos internos, sempre com avaliação, guardrails e métricas — não apenas chamadas de API soltas.',
     features: [
-      'Integração de modelos de linguagem (LLMs) em sistemas',
-      'Automação de processos com n8n e APIs REST',
-      'Criação de agentes RAG para análise de dados',
-      'Fluxos inteligentes para operações financeiras',
+      'Agentes RAG com embeddings e busca vetorial (pgvector)',
+      'Prompt engineering estruturado e versionado',
+      'Pipelines de avaliação, feedback humano e melhoria contínua',
+      'Integração de LLMs em motores de decisão e análises de crédito',
+    ],
+  },
+  {
+    icon: Workflow,
+    title: 'Automação & No-Code',
+    shortDesc: 'Fluxos inteligentes com n8n, Make e integrações via API',
+    fullDesc: 'Desenho e implementação de automações de processo combinando plataformas no-code com código próprio quando o problema exige controle fino.',
+    features: [
+      'n8n auto-hospedado com workflows versionados',
+      'Integrações entre CRMs, planilhas, e-mail, WhatsApp e ERPs',
+      'Webhooks, filas e orquestração de tarefas assíncronas',
+      'Automação de back-office e operações financeiras',
+    ],
+  },
+  {
+    icon: Code,
+    title: 'Aplicações Web',
+    shortDesc: 'Interfaces e painéis internos focados em produtividade e clareza',
+    fullDesc: 'Desenvolvimento de aplicações web responsivas com React, Next.js e TypeScript, priorizando manutenibilidade e experiência do usuário final.',
+    features: [
+      'Painéis administrativos e dashboards operacionais',
+      'Componentização e design systems consistentes',
+      'Integração direta com APIs internas e serviços de IA',
+      'Performance, acessibilidade e SEO técnico',
     ],
   },
 ];
