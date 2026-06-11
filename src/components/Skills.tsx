@@ -1,27 +1,51 @@
 import { useState } from 'react';
-import { ChevronDown, Code, Server } from 'lucide-react';
+import { ChevronDown, Code, Server, Bot, Workflow } from 'lucide-react';
 
 interface Skill {
   name: string;
   level: 'Avançado' | 'Intermediário' | 'Básico';
 }
 
-const frontendSkills: Skill[] = [
-  { name: 'Next.js', level: 'Avançado' },
-  { name: 'CSS', level: 'Avançado' },
-  { name: 'JavaScript', level: 'Intermediário' },
-  { name: 'React', level: 'Intermediário' },
-  { name: 'TypeScript', level: 'Intermediário' },
-  { name: 'Vue', level: 'Básico' },
+const backendSkills: Skill[] = [
+  { name: 'PHP', level: 'Avançado' },
+  { name: 'Node.js', level: 'Avançado' },
+  { name: 'APIs REST', level: 'Avançado' },
+  { name: 'MySQL', level: 'Avançado' },
+  { name: 'Linux / Shell', level: 'Intermediário' },
+  { name: 'Python', level: 'Intermediário' },
+  { name: 'PostgreSQL', level: 'Intermediário' },
+  { name: 'Docker', level: 'Intermediário' },
+  { name: 'Redis', level: 'Básico' },
+  { name: 'MongoDB', level: 'Básico' },
 ];
 
-const backendSkills: Skill[] = [
-  { name: 'Node.js', level: 'Intermediário' },
-  { name: 'PHP', level: 'Intermediário' },
-  { name: 'Python', level: 'Intermediário' },
-  { name: 'MySQL', level: 'Intermediário' },
-  { name: 'Firebase', level: 'Intermediário' },
-  { name: 'MongoDB', level: 'Básico' },
+const aiSkills: Skill[] = [
+  { name: 'OpenAI (GPT)', level: 'Avançado' },
+  { name: 'Anthropic (Claude)', level: 'Avançado' },
+  { name: 'Prompt Engineering', level: 'Avançado' },
+  { name: 'RAG / Embeddings', level: 'Intermediário' },
+  { name: 'Google Gemini', level: 'Intermediário' },
+  { name: 'LangChain', level: 'Intermediário' },
+  { name: 'Vector DBs (pgvector)', level: 'Intermediário' },
+  { name: 'Fine-tuning', level: 'Básico' },
+];
+
+const automationSkills: Skill[] = [
+  { name: 'n8n (self-hosted)', level: 'Avançado' },
+  { name: 'Webhooks & APIs', level: 'Avançado' },
+  { name: 'Make (Integromat)', level: 'Intermediário' },
+  { name: 'Zapier', level: 'Intermediário' },
+  { name: 'Lovable / No-Code', level: 'Intermediário' },
+  { name: 'Supabase Edge Functions', level: 'Intermediário' },
+];
+
+const frontendSkills: Skill[] = [
+  { name: 'Next.js', level: 'Avançado' },
+  { name: 'CSS / Tailwind', level: 'Avançado' },
+  { name: 'React', level: 'Intermediário' },
+  { name: 'TypeScript', level: 'Intermediário' },
+  { name: 'JavaScript', level: 'Intermediário' },
+  { name: 'Vue', level: 'Básico' },
 ];
 
 const levelColors: Record<string, string> = {
