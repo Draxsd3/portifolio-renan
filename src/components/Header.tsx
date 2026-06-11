@@ -1,83 +1,77 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '@/assets/logo.webp';
 
 const navItems = [
-  { label: 'Início', href: '#home' },
-  { label: 'Sobre', href: '#about' },
-  { label: 'Habilidades', href: '#skills' },
-  { label: 'Serviços', href: '#services' },
-  { label: 'Qualificações', href: '#qualifications' },
-  { label: 'Portfólio', href: '#portfolio' },
-  { label: 'Contato', href: '#contact' },
+  { label: 'Sobre', href: '#about', num: '01' },
+  { label: 'Stack', href: '#skills', num: '02' },
+  { label: 'Serviços', href: '#services', num: '03' },
+  { label: 'Trajetória', href: '#qualifications', num: '04' },
+  { label: 'Projetos', href: '#portfolio', num: '05' },
+  { label: 'Contato', href: '#contact', num: '06' },
 ];
 
 export const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
+        scrolled ? 'bg-background/90 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4 sm:px-6 py-3 md:py-4">
-        <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center gap-2 sm:gap-3">
-            <img src={logo} alt="Renan Logo" className="h-8 sm:h-10 w-auto" />
-            <span className="font-display text-lg sm:text-xl font-bold text-foreground tracking-tight">Renan Ramos</span>
-          </a>
+      <nav className="max-w-3xl mx-auto px-6 py-6 flex items-center justify-between">
+        <a href="#home" className="font-display font-black text-lg tracking-tighter text-foreground">
+          RR<span className="text-foreground/40">.</span>
+        </a>
 
-          {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-foreground after:transition-all hover:after:w-full"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <ul className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                className="group inline-flex items-baseline gap-1.5 text-[11px] uppercase tracking-[0.2em] font-semibold text-foreground/60 hover:text-foreground transition-colors"
+              >
+                <span className="text-foreground/30 group-hover:text-foreground/60 transition-colors">{item.num}</span>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <ul className="lg:hidden mt-4 py-4 space-y-3 border-t border-border bg-background">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 py-1"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-foreground p-1"
+          aria-label="Toggle menu"
+        >
+          {open ? <X size={18} /> : <Menu size={18} />}
+        </button>
       </nav>
+
+      {open && (
+        <div className="md:hidden border-t border-foreground/10 bg-background">
+          <ul className="max-w-3xl mx-auto px-6 py-6 space-y-4">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="flex items-baseline gap-3 text-sm uppercase tracking-[0.2em] font-semibold text-foreground/70 hover:text-foreground"
+                >
+                  <span className="text-foreground/30">{item.num}</span>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
