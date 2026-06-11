@@ -54,7 +54,7 @@ export const About = () => {
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-6 md:mb-8 text-sm md:text-base animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              Atuo como engenheiro de software responsável pela área de tecnologia de uma securitizadora, desenvolvendo sistemas internos, automações e um motor de crédito inteligente integrado a IA. Tenho experiência sólida em back-end com PHP e Node.js, integrações via APIs REST, bancos de dados SQL e ambientes Linux de produção. Meu foco é entregar soluções escaláveis, confiáveis e diretamente alinhadas aos objetivos do negócio.
+              Atuo como engenheiro de software responsável pela área de tecnologia de uma securitizadora, desenvolvendo sistemas internos em PHP e Node.js, integrações via APIs REST, bancos de dados relacionais e ambientes Linux em produção. Construo um motor de crédito próprio que combina regras de negócio, pipelines de dados e modelos de linguagem (GPT, Claude e Gemini) com técnicas de RAG e embeddings para apoiar a tomada de decisão dos analistas. Também desenho automações ponta a ponta com n8n auto-hospedado, webhooks e integrações com ferramentas de mercado, sempre priorizando código versionado, observabilidade e arquitetura sustentável — não improviso disfarçado de IA.
             </p>
 
             <a 
