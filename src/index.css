@@ -4,80 +4,49 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
+    /* Paper & Ink palette */
+    --background: 43 29% 95%;          /* #f5f3ee */
+    --foreground: 0 0% 18%;             /* #2d2d2d */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card: 43 29% 95%;
+    --card-foreground: 0 0% 18%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 43 29% 95%;
+    --popover-foreground: 0 0% 18%;
 
-    --primary: 0 0% 8%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 5%;                 /* #0d0d0d ink */
+    --primary-foreground: 43 29% 95%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 38 20% 89%;            /* #e8e4dd surface */
+    --secondary-foreground: 0 0% 18%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 38 20% 89%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 38 20% 89%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 8%;
+    --border: 0 0% 5%;
+    --input: 0 0% 5%;
+    --ring: 0 0% 5%;
 
-    --radius: 0.75rem;
+    --radius: 0;
 
-    /* Custom tokens */
-    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.08);
-    --shadow-hover: 0 12px 40px -8px hsl(0 0% 0% / 0.15);
+    --shadow-card: 0 1px 0 0 hsl(0 0% 5% / 0.06);
+    --shadow-hover: 0 1px 0 0 hsl(0 0% 5% / 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Font families */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
-
-  .dark {
-    --background: 0 0% 6%;
-    --foreground: 0 0% 95%;
-
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 0 0% 95%;
-    --primary-foreground: 0 0% 6%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 90%;
-
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 0 0% 18%;
-    --accent-foreground: 0 0% 95%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 95%;
-
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 85%;
+    --font-display: 'Urbanist', sans-serif;
+    --font-body: 'Epilogue', sans-serif;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border/10;
   }
 
   html {
@@ -86,51 +55,42 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    font-weight: 300;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
 }
 
 @layer components {
-  .section-title {
-    @apply text-3xl md:text-4xl font-display font-semibold text-foreground mb-2;
+  .section-eyebrow {
+    @apply flex items-baseline gap-4 mb-12;
   }
-
-  .section-subtitle {
-    @apply text-muted-foreground text-sm md:text-base mb-8 md:mb-12;
+  .section-eyebrow-num {
+    @apply font-display font-black text-3xl md:text-4xl text-foreground/10;
   }
-
-  .blob-shape {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: blob-morph 8s ease-in-out infinite;
+  .section-eyebrow-title {
+    @apply font-display text-2xl md:text-4xl font-black text-foreground uppercase tracking-tight;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium transition-all duration-300;
+    @apply inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-xs uppercase tracking-[0.2em] font-semibold transition-colors duration-300;
   }
-
   .btn-primary:hover {
-    @apply shadow-hover scale-105;
+    @apply bg-foreground;
   }
 
-  .btn-secondary {
-    @apply inline-flex items-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground rounded-full font-medium transition-all duration-300;
-  }
-
-  .btn-secondary:hover {
-    @apply shadow-hover scale-105 bg-muted;
-  }
-
-  .btn-outline {
-    @apply inline-flex items-center gap-3 px-8 py-4 border-2 border-foreground text-foreground rounded-full font-medium transition-all duration-300;
-  }
-
-  .btn-outline:hover {
-    @apply bg-foreground text-background;
+  .hairline {
+    @apply h-px w-full bg-foreground/10;
   }
 }
+
 
 @layer utilities {
   .animate-fade-in {
