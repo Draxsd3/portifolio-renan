@@ -126,8 +126,10 @@ export const Skills = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-          <SkillCard title="Frontend Developer" icon={Code} skills={frontendSkills} defaultOpen={true} delay="0.2s" />
-          <SkillCard title="Backend Developer" icon={Server} skills={backendSkills} defaultOpen={true} delay="0.3s" />
+          <SkillCard title="Back-End Engineering" icon={Server} skills={backendSkills} defaultOpen={true} delay="0.2s" />
+          <SkillCard title="IA Aplicada & LLMs" icon={Bot} skills={aiSkills} defaultOpen={true} delay="0.3s" />
+          <SkillCard title="Automação & No-Code" icon={Workflow} skills={automationSkills} defaultOpen={false} delay="0.4s" />
+          <SkillCard title="Front-End" icon={Code} skills={frontendSkills} defaultOpen={false} delay="0.5s" />
         </div>
       </div>
     </section>
