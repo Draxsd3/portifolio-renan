@@ -28,9 +28,9 @@ const services = [
   },
   {
     icon: Workflow,
-    title: 'Automação & No-Code',
+    title: 'Automações',
     shortDesc: 'Fluxos inteligentes com n8n, Make e integrações via API',
-    fullDesc: 'Desenho e implementação de automações de processo combinando plataformas no-code com código próprio quando o problema exige controle fino.',
+    fullDesc: 'Desenho e implementação de automações de processo combinando ferramentas de mercado e código próprio quando o problema exige controle fino.',
     features: [
       'n8n auto-hospedado com workflows versionados',
       'Integrações entre CRMs, planilhas, e-mail, WhatsApp e ERPs',
