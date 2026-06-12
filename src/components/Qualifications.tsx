@@ -1,66 +1,123 @@
 import { useState } from 'react';
+import { GraduationCap, Briefcase, Calendar } from 'lucide-react';
 
 const education = [
-  { title: 'Desenvolvimento de Softwares', institution: 'Fatec — Presencial', period: '2024 — Presente' },
-  { title: 'Técnico em Informática', institution: 'Senac — Presencial', period: '2022 — 2024' },
-  { title: 'MERN Stack', institution: 'DankiCode — Online', period: '2024 — 6 meses' },
-  { title: 'Web Development', institution: 'Alura — Online', period: '2024 — 4 meses' },
+  {
+    title: 'Técnico em Informática',
+    institution: 'Senac - Presencial',
+    period: '2022 - 2024',
+  },
+  {
+    title: 'MERN Stack',
+    institution: 'DankiCode - Online',
+    period: '2024 - 6 Meses',
+  },
+  {
+    title: 'Web Development',
+    institution: 'Alura - Online',
+    period: '2024 - 4 Meses',
+  },
+  {
+    title: 'Desenvolvimento de Softwares',
+    institution: 'Fatec - Presencial',
+    period: '2024 - Presente',
+  },
 ];
 
 const experience = [
-  { title: 'Software Engineer', institution: 'Gold Credit Securitizadora S/A', period: '2024 — Presente' },
-  { title: 'Desenvolvedor Freelance', institution: 'Autônomo', period: '2022 — Presente' },
-  { title: 'Suporte Técnico', institution: 'EasySoft Sistemas', period: '2022 — 2024' },
+  {
+    title: 'Software Engineer',
+    institution: 'Gold Credit Securitizadora S/A',
+    period: '2024 - Presente',
+  },
+  {
+    title: 'Desenvolvedor Freelance',
+    institution: 'Autônomo',
+    period: '2022 - Presente',
+  },
+  {
+    title: 'Suporte Técnico',
+    institution: 'EasySoft Sistemas',
+    period: '2022 - 2024',
+  },
 ];
 
-type Tab = 'education' | 'experience';
+type TabType = 'education' | 'experience';
 
 export const Qualifications = () => {
-  const [tab, setTab] = useState<Tab>('experience');
-  const data = tab === 'education' ? education : experience;
+  const [activeTab, setActiveTab] = useState<TabType>('education');
+
+  const currentData = activeTab === 'education' ? education : experience;
 
   return (
-    <section id="qualifications" className="px-6 py-24 md:py-32">
-      <div className="max-w-3xl mx-auto space-y-12">
-        <div className="section-eyebrow">
-          <span className="section-eyebrow-num">04</span>
-          <h2 className="section-eyebrow-title">Path</h2>
+    <section id="qualifications" className="py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="section-title">Qualification</h2>
+          <p className="section-subtitle">My personal journey</p>
         </div>
 
-        <div className="flex gap-8 border-b border-foreground/10">
-          {(['experience', 'education'] as Tab[]).map((t) => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={`pb-3 text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors ${
-                tab === t
-                  ? 'text-foreground border-b-2 border-foreground -mb-px'
-                  : 'text-foreground/40 hover:text-foreground'
-              }`}
-            >
-              {t === 'experience' ? 'Experiência' : 'Educação'}
-            </button>
-          ))}
+        {/* Tabs */}
+        <div className="flex justify-center gap-4 sm:gap-8 mb-8 md:mb-12">
+          <button
+            onClick={() => setActiveTab('education')}
+            className={`flex items-center gap-2 text-sm sm:text-base md:text-lg font-medium transition-all duration-200 pb-2 border-b-2 ${
+              activeTab === 'education'
+                ? 'text-foreground border-foreground'
+                : 'text-muted-foreground border-transparent hover:text-foreground'
+            }`}
+          >
+            <GraduationCap size={18} className="sm:w-5 sm:h-5 md:w-[22px] md:h-[22px]" />
+            Education
+          </button>
+          <button
+            onClick={() => setActiveTab('experience')}
+            className={`flex items-center gap-2 text-sm sm:text-base md:text-lg font-medium transition-all duration-200 pb-2 border-b-2 ${
+              activeTab === 'experience'
+                ? 'text-foreground border-foreground'
+                : 'text-muted-foreground border-transparent hover:text-foreground'
+            }`}
+          >
+            <Briefcase size={18} className="sm:w-5 sm:h-5 md:w-[22px] md:h-[22px]" />
+            Experience
+          </button>
         </div>
 
-        <div className="space-y-8">
-          {data.map((item, i) => (
-            <div
-              key={`${tab}-${item.title}`}
-              className="relative border-l border-foreground/10 pl-8"
-            >
+        {/* Timeline */}
+        <div className="max-w-2xl mx-auto">
+          <div className="relative">
+            {currentData.map((item, index) => (
               <div
-                className={`absolute w-2 h-2 rounded-full left-[-4.5px] top-2 ${
-                  i === 0 ? 'bg-foreground' : 'bg-foreground/20'
+                key={item.title}
+                className={`flex gap-3 sm:gap-6 mb-6 md:mb-8 last:mb-0 ${
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse text-right'
                 }`}
-              />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40">
-                {item.period}
-              </span>
-              <h4 className="font-display text-lg font-bold text-foreground mt-1">{item.title}</h4>
-              <p className="text-sm text-foreground/60 font-light">{item.institution}</p>
-            </div>
-          ))}
+              >
+                {/* Content */}
+                <div className="flex-1 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="bg-background border border-border rounded-xl p-4 md:p-5 hover:shadow-card hover:border-foreground/20 transition-all duration-300">
+                    <h3 className="font-display font-semibold text-foreground mb-1 text-sm md:text-base">{item.title}</h3>
+                    <p className="text-xs md:text-sm text-muted-foreground mb-2">{item.institution}</p>
+                    <div className={`flex items-center gap-2 text-[10px] md:text-xs text-muted-foreground ${index % 2 !== 0 ? 'justify-end' : ''}`}>
+                      <Calendar size={12} className="md:w-[14px] md:h-[14px]" />
+                      {item.period}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Timeline dot */}
+                <div className="flex flex-col items-center">
+                  <div className="timeline-dot"></div>
+                  {index < currentData.length - 1 && (
+                    <div className="w-[2px] flex-1 bg-border mt-2"></div>
+                  )}
+                </div>
+
+                {/* Spacer */}
+                <div className="flex-1 hidden sm:block"></div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
