@@ -1,5 +1,4 @@
 import { Award, Briefcase, Headphones, Download } from 'lucide-react';
-import aboutPhoto from '@/assets/about-photo.webp';
 
 const stats = [
   { icon: Award, label: 'Experience', value: '3+', sublabel: 'Years Working' },
@@ -16,29 +15,8 @@ export const About = () => {
           <p className="section-subtitle animate-fade-in-up" style={{ animationDelay: '0.1s' }}>My introduction</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Image */}
-          <div className="flex justify-center animate-slide-in-left">
-            <div className="relative group">
-              <div className="w-56 h-64 sm:w-64 sm:h-72 md:w-72 md:h-80 lg:w-80 lg:h-[420px] rounded-2xl overflow-hidden shadow-hover transition-all duration-500 group-hover:shadow-2xl group-hover:scale-[1.02]">
-                <img
-                  src={aboutPhoto}
-                  alt="Sobre mim"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-              <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-16 h-16 md:w-24 md:h-24 bg-foreground rounded-2xl -z-10 transition-all duration-500 group-hover:-bottom-5 group-hover:-right-5 md:group-hover:-bottom-6 md:group-hover:-right-6"></div>
-              {/* Floating decorative elements */}
-              <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-6 h-6 md:w-8 md:h-8 border-2 border-foreground/30 rounded-lg animate-float" style={{ animationDelay: '0.5s' }} />
-              <div className="absolute -bottom-6 left-1/2 w-4 h-4 md:w-6 md:h-6 bg-foreground/20 rounded-full animate-float" style={{ animationDelay: '1s' }} />
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="animate-slide-in-right">
-            {/* Stats */}
+        <div className="max-w-3xl mx-auto">
+          <div className="animate-fade-in-up text-center">
             <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-8 md:mb-10">
               {stats.map((stat, index) => (
                 <div
@@ -57,10 +35,10 @@ export const About = () => {
               Atuo como engenheiro de software responsável pela área de tecnologia de uma securitizadora, desenvolvendo sistemas internos em PHP e Node.js, integrações via APIs REST, bancos de dados relacionais e ambientes Linux em produção. Construo um motor de crédito próprio que combina regras de negócio, pipelines de dados e modelos de linguagem (GPT, Claude e Gemini) com técnicas de RAG e embeddings para apoiar a tomada de decisão dos analistas. Também desenho automações ponta a ponta com n8n auto-hospedado, webhooks e integrações com ferramentas de mercado, sempre priorizando código versionado, observabilidade e arquitetura sustentável — não improviso disfarçado de IA.
             </p>
 
-            <a 
-              href="/Curriculo_Renan_Ramos.pdf" 
-              download 
-              className="btn-primary group animate-fade-in-up"
+            <a
+              href="/Curriculo_Renan_Ramos.pdf"
+              download
+              className="btn-primary group animate-fade-in-up inline-flex"
               style={{ animationDelay: '0.6s' }}
             >
               Download CV
