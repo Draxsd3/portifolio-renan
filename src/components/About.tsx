@@ -1,5 +1,4 @@
 import { Award, Briefcase, Headphones, Download } from 'lucide-react';
-import aboutPhoto from '@/assets/about-photo.webp';
 
 const stats = [
   { icon: Award, label: 'Experience', value: '3+', sublabel: 'Years Working' },
