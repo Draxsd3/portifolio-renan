@@ -1,5 +1,7 @@
 import { Instagram, Github, Linkedin, Send } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.webp';
+import profilePhotoAsset from '@/assets/profile-photo.png.asset.json';
+
+const profilePhoto = profilePhotoAsset.url;
 
 export const Hero = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, Code, Server, Bot, Workflow } from 'lucide-react';
+import { ChevronDown, Code, Server } from 'lucide-react';
 
 interface Skill {
   name: string;
@@ -13,35 +13,11 @@ const backendSkills: Skill[] = [
   { name: 'MySQL', level: 'Avançado' },
   { name: 'Linux / Shell', level: 'Intermediário' },
   { name: 'Python', level: 'Intermediário' },
-  { name: 'PostgreSQL', level: 'Intermediário' },
-  { name: 'Docker', level: 'Intermediário' },
-  { name: 'Redis', level: 'Básico' },
   { name: 'MongoDB', level: 'Básico' },
-];
-
-const aiSkills: Skill[] = [
-  { name: 'OpenAI (GPT)', level: 'Avançado' },
-  { name: 'Anthropic (Claude)', level: 'Avançado' },
-  { name: 'Prompt Engineering', level: 'Avançado' },
-  { name: 'RAG / Embeddings', level: 'Intermediário' },
-  { name: 'Google Gemini', level: 'Intermediário' },
-  { name: 'LangChain', level: 'Intermediário' },
-  { name: 'Vector DBs (pgvector)', level: 'Intermediário' },
-  { name: 'Fine-tuning', level: 'Básico' },
-];
-
-const automationSkills: Skill[] = [
-  { name: 'n8n (self-hosted)', level: 'Avançado' },
-  { name: 'Webhooks & APIs', level: 'Avançado' },
-  { name: 'Make (Integromat)', level: 'Intermediário' },
-  { name: 'Zapier', level: 'Intermediário' },
-  { name: 'Lovable / No-Code', level: 'Intermediário' },
-  { name: 'Supabase Edge Functions', level: 'Intermediário' },
 ];
 
 const frontendSkills: Skill[] = [
   { name: 'Next.js', level: 'Avançado' },
-  { name: 'CSS / Tailwind', level: 'Avançado' },
   { name: 'React', level: 'Intermediário' },
   { name: 'TypeScript', level: 'Intermediário' },
   { name: 'JavaScript', level: 'Intermediário' },
@@ -126,10 +102,8 @@ export const Skills = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-          <SkillCard title="Back-End Engineering" icon={Server} skills={backendSkills} defaultOpen={true} delay="0.2s" />
-          <SkillCard title="IA Aplicada & LLMs" icon={Bot} skills={aiSkills} defaultOpen={true} delay="0.3s" />
-          <SkillCard title="Automação & No-Code" icon={Workflow} skills={automationSkills} defaultOpen={false} delay="0.4s" />
-          <SkillCard title="Front-End" icon={Code} skills={frontendSkills} defaultOpen={false} delay="0.5s" />
+          <SkillCard title="Back-End Developer" icon={Server} skills={backendSkills} defaultOpen={true} delay="0.2s" />
+          <SkillCard title="Front-End Developer" icon={Code} skills={frontendSkills} defaultOpen={true} delay="0.3s" />
         </div>
       </div>
     </section>
