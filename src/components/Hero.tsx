@@ -38,11 +38,11 @@ export const Hero = () => {
           {/* Profile Image */}
           <div className="animate-bounce-in mb-6 md:mb-8">
             <div className="relative group">
-              <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105 animate-glow">
+              <div className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 blob-shape bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105 animate-glow">
                 <img
                   src={profilePhoto}
-                  alt="Renan Ramos - Desenvolvedor FullStack"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  alt="Renan Ramos - Software Engineer"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               {/* Decorative ring */}
