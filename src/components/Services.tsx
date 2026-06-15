@@ -63,7 +63,7 @@ export const Services = () => {
           <p className="section-subtitle animate-fade-in-up" style={{ animationDelay: '0.1s' }}>What I offer</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
