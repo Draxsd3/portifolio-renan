@@ -17,16 +17,16 @@ export const About = () => {
 
         <div className="max-w-3xl mx-auto">
           <div className="animate-fade-in-up text-center">
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-8 md:mb-10">
+            <div className="flex justify-center items-start gap-8 sm:gap-16 md:gap-24 mb-10 md:mb-12">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="bg-background border border-border rounded-xl p-3 sm:p-4 md:p-5 text-center hover:shadow-card hover:border-foreground/20 hover:-translate-y-2 transition-all duration-300 group animate-fade-in-up hover-glow"
+                  className="text-center group animate-fade-in-up"
                   style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                 >
-                  <stat.icon size={18} className="mx-auto mb-2 md:mb-3 text-foreground group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 sm:w-5 sm:h-5 md:w-[22px] md:h-[22px]" />
-                  <p className="font-display font-bold text-lg sm:text-xl md:text-2xl text-foreground group-hover:scale-110 transition-transform duration-300">{stat.value}</p>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground mt-0.5 sm:mt-1">{stat.sublabel}</p>
+                  <stat.icon size={22} className="mx-auto mb-2 md:mb-3 text-foreground group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" strokeWidth={1.5} />
+                  <p className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-foreground">{stat.value}</p>
+                  <p className="text-[10px] sm:text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">{stat.sublabel}</p>
                 </div>
               ))}
             </div>
