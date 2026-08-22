@@ -46,12 +46,12 @@ import babelAlunos from '@/assets/babel-alunos.webp';
 import babelMensagens from '@/assets/babel-mensagens.webp';
 import babelFinanceiro from '@/assets/babel-financeiro.webp';
 
-// Sistema de Análise de Crédito com IA screenshots
-import creditoIAFluxo from '@/assets/credito-ia-fluxo.webp';
-import creditoIAAnalise from '@/assets/credito-ia-analise.webp';
-import creditoIAValores from '@/assets/credito-ia-valores.webp';
-import creditoIAFeedback from '@/assets/credito-ia-feedback.webp';
-import creditoIAResultado from '@/assets/credito-ia-resultado.webp';
+// Plataforma Operacional screenshots
+import plataformaOperacionalDashboard from '@/assets/plataforma-operacional-dashboard.webp.asset.json';
+import plataformaOperacionalCedentes from '@/assets/plataforma-operacional-cedentes.webp.asset.json';
+import plataformaOperacionalPipeline from '@/assets/plataforma-operacional-pipeline.webp.asset.json';
+import plataformaOperacionalSacados from '@/assets/plataforma-operacional-sacados.webp.asset.json';
+import plataformaOperacionalRelatorios from '@/assets/plataforma-operacional-relatorios.webp.asset.json';
 
 // Plataforma Operacional screenshots
 import operacionalDashboard from '@/assets/operacional-dashboard.webp';
@@ -215,42 +215,41 @@ const projects: Project[] = [
     },
   },
   {
-    title: 'Análise de Crédito com IA',
-    category: 'Automações',
-    description: 'Sistema inteligente de análise de crédito utilizando agente RAG que aprende continuamente com feedbacks dos analistas.',
-    tags: ['React.js', 'Node.js', 'OpenAI', 'RAG'],
-    image: creditoIAFluxo,
+    title: 'Plataforma Operacional',
+    category: 'App',
+    description: 'Plataforma operacional construída para uma securitizadora, gerenciando carteira, cedentes, sacados, pipeline de operações e relatórios financeiros em tempo real.',
+    tags: ['React.js', 'Node.js', 'PostgreSQL', 'Redis'],
+    image: plataformaOperacionalDashboard.url,
     demoUrl: '#',
     codeUrl: '#',
     screenshots: [
-      creditoIAResultado,
-      creditoIAAnalise,
-      creditoIAValores,
-      creditoIAFeedback,
-      creditoIAFluxo,
+      plataformaOperacionalDashboard.url,
+      plataformaOperacionalCedentes.url,
+      plataformaOperacionalPipeline.url,
+      plataformaOperacionalSacados.url,
+      plataformaOperacionalRelatorios.url,
     ],
     development: {
-      duration: '3 meses',
+      duration: '6 meses (evolução contínua)',
       team: 'Solo',
       year: '2025',
       challenges: [
-        'Implementação de agente RAG com memória vetorial',
-        'Sistema de aprendizado contínuo via feedback',
-        'Extração automática de dados de documentos',
-        'Análise de risco com múltiplos critérios',
-        'Integração com Supabase Vector Store',
+        'Modelar domínio financeiro de securitizadora (cedentes, sacados, operações, recebíveis)',
+        'Pipeline de operações com acompanhamento de status e formalização',
+        'Gestão de risco com exposição, atrasos e concentração por sacado',
+        'Relatórios operacionais e financeiros com exportação e histórico',
+        'Integração de dados contábeis e conciliação de recebíveis',
       ],
-      technologies: ['React.js', 'Node.js', 'n8n', 'OpenAI GPT-4', 'Supabase', 'PostgreSQL', 'Embeddings', 'RAG'],
+      technologies: ['React 18', 'TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Linux', 'n8n'],
       features: [
-        'Análise automática de NF-e, Duplicatas e Boletos',
-        'Extração de dados de cedente e sacados',
-        'Parecer com IA baseado em perfil de risco',
-        'Scores de segurança (Cedente, Sacado, Operação)',
-        'Sistema de feedback para aprendizado contínuo',
-        'Histórico de análises realizadas',
-        'Gráfico radar de perfil de risco',
+        'Dashboard operacional com saldo de carteira, inadimplência e volume',
+        'Cadastro e gestão de cedentes com limites e documentação',
+        'Pipeline de operações com acompanhamento de status e responsáveis',
+        'Gestão de sacados com exposição, atrasos e concentração',
+        'Relatórios financeiros por período com exportação',
+        'Auditoria de movimentações e decisões',
       ],
-      description: 'Sistema de análise de crédito inteligente desenvolvido para a Gold Credit. Utiliza um agente RAG (Retrieval Augmented Generation) que analisa documentos financeiros e gera pareceres automáticos. O diferencial é o sistema de aprendizado contínuo: cada feedback dos analistas é armazenado como embedding no Supabase Vector Store, permitindo que a IA aprenda com decisões passadas e melhore suas análises futuras.',
+      description: 'Plataforma operacional construída para uma securitizadora, responsável por acompanhar a carteira de recebíveis, gerenciar cedentes e sacados, conduzir operações de compra de crédito e gerar relatórios financeiros. O sistema centraliza o pipeline de operações (nova operação, análise, formalização, desembolso e liquidação), controla limites e documentação dos cedentes, monitora a exposição e atrasos dos sacados, e produz relatórios gerenciais com histórico. Back-end em Node.js com PostgreSQL, cache com Redis, contêineres Docker em ambiente Linux e automações de rotina em n8n. As telas exibidas são mockups ilustrativos, sem dados reais.',
     },
   },
   {
