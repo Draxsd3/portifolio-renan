@@ -330,7 +330,7 @@ const projects: Project[] = [
         'Score de crédito com pesos por critério, perfil de risco e recomendação',
         'Decisão registrada com justificativa, analista responsável e exportação em PDF',
       ],
-      description: 'Plataforma pré-operacional construída para o processo de entrada e análise de clientes em uma operação financeira. Concentra o funil comercial (CRM), o cadastro e a validação documental de cedentes, uma camada de investigação web com IA sobre fontes públicas e um motor de score de crédito com critérios ponderados. Cada decisão fica registrada com justificativa e responsável, garantindo rastreabilidade. Back-end em Node.js com PostgreSQL, processamento assíncrono via filas e automações em n8n; a camada de IA usa LLMs com RAG apenas como apoio à decisão do analista — nunca como substituto. As telas exibidas são mockups ilustrativos, sem dados reais.',
+      description: 'Plataforma pré-operacional construída para uma securitizadora, voltada ao processo de entrada e análise de clientes em uma operação financeira. Concentra o funil comercial (CRM), o cadastro e a validação documental de cedentes, uma camada de investigação web com IA sobre fontes públicas e um motor de score de crédito com critérios ponderados. Cada decisão fica registrada com justificativa e responsável, garantindo rastreabilidade. Back-end em Node.js com PostgreSQL, processamento assíncrono via filas e automações em n8n; a camada de IA usa LLMs com RAG apenas como apoio à decisão do analista — nunca como substituto. As telas exibidas são mockups ilustrativos, sem dados reais.',
     },
   },
 ];
