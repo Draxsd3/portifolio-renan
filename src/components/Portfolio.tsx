@@ -47,11 +47,11 @@ import babelMensagens from '@/assets/babel-mensagens.webp';
 import babelFinanceiro from '@/assets/babel-financeiro.webp';
 
 // Plataforma Operacional screenshots
-import plataformaOperacionalDashboard from '@/assets/plataforma-operacional-dashboard.webp.asset.json';
-import plataformaOperacionalCedentes from '@/assets/plataforma-operacional-cedentes.webp.asset.json';
-import plataformaOperacionalPipeline from '@/assets/plataforma-operacional-pipeline.webp.asset.json';
-import plataformaOperacionalSacados from '@/assets/plataforma-operacional-sacados.webp.asset.json';
-import plataformaOperacionalRelatorios from '@/assets/plataforma-operacional-relatorios.webp.asset.json';
+import plataformaOperacionalDashboard from '@/assets/plataforma-operacional-dashboard.jpg';
+import plataformaOperacionalCedentes from '@/assets/plataforma-operacional-cedentes.jpg';
+import plataformaOperacionalPipeline from '@/assets/plataforma-operacional-pipeline.jpg';
+import plataformaOperacionalSacados from '@/assets/plataforma-operacional-sacados.jpg';
+import plataformaOperacionalRelatorios from '@/assets/plataforma-operacional-relatorios.jpg';
 
 // Plataforma Operacional screenshots
 import operacionalDashboard from '@/assets/operacional-dashboard.webp';
@@ -219,15 +219,15 @@ const projects: Project[] = [
     category: 'App',
     description: 'Plataforma operacional construída para uma securitizadora, gerenciando carteira, cedentes, sacados, pipeline de operações e relatórios financeiros em tempo real.',
     tags: ['React.js', 'Node.js', 'PostgreSQL', 'Redis'],
-    image: plataformaOperacionalDashboard.url,
+    image: plataformaOperacionalDashboard,
     demoUrl: '#',
     codeUrl: '#',
     screenshots: [
-      plataformaOperacionalDashboard.url,
-      plataformaOperacionalCedentes.url,
-      plataformaOperacionalPipeline.url,
-      plataformaOperacionalSacados.url,
-      plataformaOperacionalRelatorios.url,
+      plataformaOperacionalDashboard,
+      plataformaOperacionalCedentes,
+      plataformaOperacionalPipeline,
+      plataformaOperacionalSacados,
+      plataformaOperacionalRelatorios,
     ],
     development: {
       duration: '6 meses (evolução contínua)',
