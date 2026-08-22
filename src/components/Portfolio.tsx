@@ -53,6 +53,13 @@ import creditoIAValores from '@/assets/credito-ia-valores.webp';
 import creditoIAFeedback from '@/assets/credito-ia-feedback.webp';
 import creditoIAResultado from '@/assets/credito-ia-resultado.webp';
 
+// Plataforma Operacional screenshots
+import operacionalDashboard from '@/assets/operacional-dashboard.webp';
+import operacionalCrm from '@/assets/operacional-crm.webp';
+import operacionalInvestigacao from '@/assets/operacional-investigacao.webp';
+import operacionalCedentes from '@/assets/operacional-cedentes.webp';
+import operacionalScore from '@/assets/operacional-score.webp';
+
 const filters = ['All', 'App', 'Automações', 'Websites'];
 
 const techIcons: Record<string, string> = {
