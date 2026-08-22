@@ -46,12 +46,12 @@ import babelAlunos from '@/assets/babel-alunos.webp';
 import babelMensagens from '@/assets/babel-mensagens.webp';
 import babelFinanceiro from '@/assets/babel-financeiro.webp';
 
-// Sistema de Análise de Crédito com IA screenshots
-import creditoIAFluxo from '@/assets/credito-ia-fluxo.webp';
-import creditoIAAnalise from '@/assets/credito-ia-analise.webp';
-import creditoIAValores from '@/assets/credito-ia-valores.webp';
-import creditoIAFeedback from '@/assets/credito-ia-feedback.webp';
-import creditoIAResultado from '@/assets/credito-ia-resultado.webp';
+// Plataforma Operacional screenshots
+import plataformaOperacionalDashboard from '@/assets/plataforma-operacional-dashboard.webp.asset.json';
+import plataformaOperacionalCedentes from '@/assets/plataforma-operacional-cedentes.webp.asset.json';
+import plataformaOperacionalPipeline from '@/assets/plataforma-operacional-pipeline.webp.asset.json';
+import plataformaOperacionalSacados from '@/assets/plataforma-operacional-sacados.webp.asset.json';
+import plataformaOperacionalRelatorios from '@/assets/plataforma-operacional-relatorios.webp.asset.json';
 
 // Plataforma Operacional screenshots
 import operacionalDashboard from '@/assets/operacional-dashboard.webp';
