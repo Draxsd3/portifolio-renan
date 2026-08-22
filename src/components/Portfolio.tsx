@@ -74,8 +74,6 @@ const techIcons: Record<string, string> = {
   'PHP/Laravel': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',
   'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
   'Vite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
-  'OpenAI': 'https://cdn.simpleicons.org/openai',
-  'RAG': 'https://cdn.simpleicons.org/openai',
   'PostgreSQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
 };
 
