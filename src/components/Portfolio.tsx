@@ -296,9 +296,9 @@ const projects: Project[] = [
     },
   },
   {
-    title: 'Plataforma Operacional',
+    title: 'Plataforma Pré-Operacional',
     category: 'App',
-    description: 'Plataforma pré-operacional que unifica CRM comercial, entrada e análise de cedentes, investigação web com IA e score de crédito em um único fluxo de decisão.',
+    description: 'Plataforma pré-operacional construída para uma securitizadora, unificando CRM comercial, entrada e análise de cedentes, investigação web com IA e score de crédito em um único fluxo de decisão.',
     tags: ['React.js', 'Node.js', 'PostgreSQL', 'OpenAI'],
     image: operacionalDashboard,
     demoUrl: '#',
