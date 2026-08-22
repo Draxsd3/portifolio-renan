@@ -296,6 +296,44 @@ const projects: Project[] = [
       description: 'Sistema de gestão escolar fullstack desenvolvido com Laravel 11 no backend, React + Vite no frontend e MySQL 8 como banco de dados. O projeto simula um sistema real utilizado por escolas, com 6 perfis de acesso (Administrador, Secretaria, Coordenação, Professor, Responsável e Aluno), cada um com permissões específicas. Destaque para o sistema de mensagens internas com chat entre perfis e o módulo financeiro completo com controle de mensalidades. Inclui testes automatizados para validar autenticação e operações principais.',
     },
   },
+  {
+    title: 'Plataforma Operacional',
+    category: 'App',
+    description: 'Plataforma pré-operacional que unifica CRM comercial, entrada e análise de cedentes, investigação web com IA e score de crédito em um único fluxo de decisão.',
+    tags: ['React.js', 'Node.js', 'PostgreSQL', 'OpenAI'],
+    image: operacionalDashboard,
+    demoUrl: '#',
+    codeUrl: '#',
+    screenshots: [
+      operacionalDashboard,
+      operacionalCrm,
+      operacionalCedentes,
+      operacionalInvestigacao,
+      operacionalScore,
+    ],
+    development: {
+      duration: '6 meses (evolução contínua)',
+      team: 'Solo',
+      year: '2025',
+      challenges: [
+        'Unificar CRM, onboarding de cedentes e análise de risco em um único fluxo',
+        'Investigação web automatizada com IA e checagem de fontes públicas',
+        'Motor de score de crédito com critérios ponderados e trilha de auditoria',
+        'Orquestração de filas e webhooks para enriquecimento de dados assíncrono',
+        'Controle de acesso por perfil e versionamento de regras de decisão',
+      ],
+      technologies: ['React 18', 'TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'n8n', 'OpenAI', 'Embeddings/RAG', 'Docker', 'Linux'],
+      features: [
+        'Dashboard operacional com indicadores de volume, status e ticket médio',
+        'CRM com funil kanban, atividades e histórico por empresa',
+        'Entrada de cedentes em etapas com checklist e documentos obrigatórios',
+        'Investigação web com IA: coleta de fontes públicas e resumo de riscos',
+        'Score de crédito com pesos por critério, perfil de risco e recomendação',
+        'Decisão registrada com justificativa, analista responsável e exportação em PDF',
+      ],
+      description: 'Plataforma pré-operacional construída para o processo de entrada e análise de clientes em uma operação financeira. Concentra o funil comercial (CRM), o cadastro e a validação documental de cedentes, uma camada de investigação web com IA sobre fontes públicas e um motor de score de crédito com critérios ponderados. Cada decisão fica registrada com justificativa e responsável, garantindo rastreabilidade. Back-end em Node.js com PostgreSQL, processamento assíncrono via filas e automações em n8n; a camada de IA usa LLMs com RAG apenas como apoio à decisão do analista — nunca como substituto. As telas exibidas são mockups ilustrativos, sem dados reais.',
+    },
+  },
 ];
 
 export const Portfolio = () => {
